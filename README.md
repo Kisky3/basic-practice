@@ -8,6 +8,7 @@ This is a practice of iconfont, no preview.
 ## Jirengu/Jirengu_task13/
 This is a index page of LOL game ( League of Legends)
 
+### preview
 [Preview](https://kisky3.github.io/Jirengu/Jirengu_task13/index)
 
 <img src="./preview_image/task_13.png">
@@ -33,6 +34,9 @@ server-sample
 |——css
       |——style.css
 ```
+
+### preview
+<img src="./preview_image/task_30.png">
 
 ### how to run
 1. download node.js
