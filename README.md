@@ -19,6 +19,7 @@ This is a practice coding about node.js & express
 
 ### structure tree
 
+```
 server-sample
 |——index.html
 |——server.js
@@ -31,6 +32,7 @@ server-sample
       |——cat04.jpg
 |——css
       |——style.css
+```
 
 ### how to run
 1. download node.js
