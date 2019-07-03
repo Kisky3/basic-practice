@@ -1,0 +1,37 @@
+html {
+  width: 100%;
+}
+
+body {
+  margin: 60px;
+  background: #FFF4F6;
+}
+
+.c-image {
+  width: 200px;
+  height: 130px;
+  background: #333;
+  margin: 10px 10px 0;
+}
+
+.button {
+	color: #fff;
+	background-color: #fed136;
+	border-color: #fed136;
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 700;
+	border-radius: 3px;
+	font-size: 18px;
+	padding: 10px 50px;
+	margin: 40px 30px 40px 0;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+}
+button, .button:hover {
+	background-color: #2EE59D;
+	border-color: #2EE59D;
+	color: #fff;
+	transform: translateY(-7px);
+}

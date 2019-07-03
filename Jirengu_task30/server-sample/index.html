@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+  </head>
+  <body>
+     <h1>Cat Page</h1>
+     <p>click the button and then you can get the cat images and sample text</p>
+     <button class="button" id="getWeather">Get Cat Images</button>
+
+     <button class="button" onclick="location.href='./sample/text.html'">Get Sample Text</button>
+
+     <div id="data"></div>
+  </body>
+</html>
+
+<script>
+  const data = document.getElementById('data');
+  const getWeather = document.getElementById('getWeather');
+  
+  getWeather.onclick = function() {
+    ajax({
+    url: 'http://localhost:8000/getCatImage',
+    type: 'GET',
+    onsuccess: function(ret){
+      showCatImage(ret);
+    },
+    onerror: function(){
+        console.log('server error')
+    }
+    })
+  }
+
+  function showCatImage(imageList) {
+    imageList.forEach(function(event) {
+       const image = document.createElement("img");
+       image.src = event.dataUrl;
+       image.classList.add('c-image');
+       data.appendChild(image);
+    });  
+  }
+
+  // ajax js method
+  function ajax(opts){
+    var url = opts.url
+    var type = opts.type || 'GET'
+    var dataType = opts.dataType || 'json'
+    var onsuccess = opts.onsuccess || function(){}
+    var onerror = opts.onerror || function(){}
+    var data = opts.data || {}
+
+    var dataStr = []
+    for(var key in data){
+        dataStr.push(key + '=' + data[key])
+    }
+    dataStr = dataStr.join('&')
+
+    if (dataStr !== '' && type === 'GET') {
+       url += '?' + dataStr
+    } 
+
+    var xhr = new XMLHttpRequest()
+    xhr.open(type, url, true)
+    xhr.onload = function(){
+        if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+            // success
+            if(dataType === 'json'){
+                onsuccess( JSON.parse(xhr.responseText))
+            }else{
+                onsuccess( xhr.responseText)
+            }
+        } else {
+            onerror()
+        }
+    }
+    xhr.onerror = onerror
+    if(type === 'POST'){
+        xhr.send(dataStr)
+    }else{
+        xhr.send()
+    }
+}
+</script>
