@@ -27,7 +27,7 @@
              <span class="play-button" id="play">
                <i class="iconfont icon-PlayFilled"></i>
              </span>
-             <span class="play-button">
+             <span class="play-button" id="next">
                <i class="iconfont icon-NexttrackFilled"></i>
              </span>
            </div>
@@ -48,18 +48,44 @@
   </body>
 </html>
 <script>
-  const currentIndex = 0;
+  let currentIndex = 0;
+  const clock = null;
   const audio = new Audio();
+  let musicList = [];
   audio.autoplay = false;
+  let playButton = document.getElementById('play');
+  let nextButton = document.getElementById('next');
+
   $('.musicbox .musicImgContent').style.animationPlayState = "paused";
 
   getMusicList(function(list) {
+    musicList = list;
     loadMusic(list[currentIndex]);
   })
 
-  const playButton = document.getElementById('play');
+
   playButton.onclick = function(){
-    audio.play();
+    const playClassList = playButton.children[0].classList;
+    if(playClassList.contains('icon-PlayFilled')){
+       playClassList.remove('icon-PlayFilled');
+       playClassList.add('icon-PauseFilled');
+       audio.play();
+    } else {
+       playClassList.remove('icon-PauseFilled');
+       playClassList.add('icon-PlayFilled');
+       audio.pause();
+    }
+  }
+
+  nextButton.onclick = function(){
+    const nextClassList = nextButton.children[0].classList;
+    
+    if(musicList.length !== 0){
+      currentIndex = (++currentIndex)%musicList.length;
+      alert(currentIndex);
+      loadMusic(musicList[currentIndex]);
+    }
+    
   }
 
   audio.ontimeupdate = function(){
@@ -71,6 +97,19 @@
 
     $('.musicbox .musicImgContent').style.animationPlayState = "running";
 
+  }
+
+  audio.onplay = function() {
+    clock = setInterval(function(){
+      let min = Math.floor(audio.currentTime/60);
+      let sec = Math.floor(audio.currentTime)%60 + '';
+      sec = sec.length ===2? sec : '0' + sec;
+      $('.musicbox .time').innerText = min + ':' + sec;
+    },1000)
+  }
+
+  audio.onpause = function(){
+    clearInterval(clock);
   }
 
   function $(selector){
