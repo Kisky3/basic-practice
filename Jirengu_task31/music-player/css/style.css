@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: Microsoft Yahei;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
 .musicbox {
 	position:absolute;
 	left: 50%;
-	top: 40%;
+	top: 45%;
 	transform: translate(-50%, -50%);
 	font-family: cursive;
 	font-size: 16;
@@ -38,6 +39,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .musicbox .control {
@@ -85,10 +87,11 @@ body {
 }
 
 .musicbox .progress .bar {
-	height: 5px;
-	margin-top: 25px;
+    height: 5px;
+    margin: 15px 0 5px 0;
     background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .music .progress .progress-now {
@@ -96,9 +99,10 @@ body {
 	height: 5px;
 	width: 0;
 	position: relative;
+	border-radius: 15px;
 }
 
-.music .musicImg {
+.music .musicImgContent {
    width:200px;
    height: 200px;
    border-radius: 110px;
@@ -106,8 +110,16 @@ body {
    margin:auto;
    opacity: 0.7;
    border:solid 10px #ffffff;
+   animation: pinkPulse 3s infinite linear;
 }
 
+@keyframes pinkPulse {
+ from { border-color: #ffffff; box-shadow: 0 0 28px #ffffff; }
+  25% { border-color: #ffc7c9; box-shadow: 0 0 48px #ffc7c9; }
+  50% { border-color: #f9b3b5; box-shadow: 0 0 28px #f9b3b5; }
+  75% { border-color: #ffe3e4; box-shadow: 0 0 48px #ffe3e4; }
+  to { border-color: #ffffff; box-shadow: 0 0 28px #ffffff; }
+}
 
 
 @font-face {font-family: "iconfont";

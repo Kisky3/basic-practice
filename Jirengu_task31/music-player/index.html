@@ -14,8 +14,8 @@
              <div class="title">My song example</div>
              <div class="auther">auther</div>
            </div>
-           <div class="musicImg">
-             
+           <div class="musicImgContent">
+             <div class="musicImg"></div>
            </div>
            <div class="control">
              <span class="play-button">
@@ -50,7 +50,8 @@
 <script>
   const currentIndex = 0;
   const audio = new Audio();
-  audio.autoplay = true;
+  audio.autoplay = false;
+  $('.musicbox .musicImgContent').style.animationPlayState = "paused";
 
   getMusicList(function(list) {
     loadMusic(list[currentIndex]);
@@ -63,10 +64,13 @@
 
   audio.ontimeupdate = function(){
     $('.musicbox .progress-now').style.width = (this.currentTime/this.duration)*100 + '%';
-    let min = Math.floor(this.currentTime/60);
-    let sec = Math.floor(this.currentTime)%60 + '';
-    sec = sec.length === 2? sec : '0' + sec
+    let min = Math.floor(this.currentTime / 60);
+    let sec = Math.floor(this.currentTime) % 60 + '';
+    sec = sec.length === 2? sec : '0' + sec;
     $('.musicbox .time').innerText = min + ':' + sec;
+
+    $('.musicbox .musicImgContent').style.animationPlayState = "running";
+
   }
 
   function $(selector){
