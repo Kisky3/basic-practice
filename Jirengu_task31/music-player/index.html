@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+  </head>
+  <body>
+     <div class="cover"></div>
+     <div class="musicbox">
+       <div class="music-panel">
+         <div class="music">
+           <div class="info">
+             <div class="title">My song example</div>
+             <div class="auther">auther</div>
+           </div>
+           <div class="musicImg">
+             
+           </div>
+           <div class="control">
+             <span class="play-button">
+               <i class="iconfont icon-xunhuanbofang"></i>
+             </span>
+             <span class="play-button">
+               <i class="iconfont icon-PrevioustrackFill"></i>
+             </span>
+             <span class="play-button" id="play">
+               <i class="iconfont icon-PlayFilled"></i>
+             </span>
+             <span class="play-button">
+               <i class="iconfont icon-NexttrackFilled"></i>
+             </span>
+           </div>
+
+         <div class="progress">
+           <div class="bar">
+             <div class="progress-total"></div>
+             <div class="progress-now"></div>
+           </div>
+         </div>
+         <div class="time">0:00</div>
+         </div>
+       </div>
+       <ul class="list">
+         
+       </ul>
+     </div>
+  </body>
+</html>
+<script>
+  const currentIndex = 0;
+  const audio = new Audio();
+  audio.autoplay = true;
+
+  getMusicList(function(list) {
+    loadMusic(list[currentIndex]);
+  })
+
+  const playButton = document.getElementById('play');
+  playButton.onclick = function(){
+    audio.play();
+  }
+
+  audio.ontimeupdate = function(){
+    $('.musicbox .progress-now').style.width = (this.currentTime/this.duration)*100 + '%';
+    let min = Math.floor(this.currentTime/60);
+    let sec = Math.floor(this.currentTime)%60 + '';
+    sec = sec.length === 2? sec : '0' + sec
+    $('.musicbox .time').innerText = min + ':' + sec;
+  }
+
+  function $(selector){
+    return document.querySelector(selector);
+  }
+
+  function getMusicList(callback){
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET','/getMusicList',true);
+    xhr.onload = function(){
+      if((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304){
+        callback(JSON.parse(this.responseText));
+      }else{
+        console.log('获取数据失败');
+      }
+    }
+    xhr.onerror = function(){
+      console.log('网络异常');
+    }
+    xhr.send();
+  }
+
+  function loadMusic(musicObj){
+    console.log('begin play',musicObj);
+    $('.musicbox .title').innerText = musicObj.title;
+    $('.musicbox .auther').innerText = musicObj.auther;
+    
+    audio.src = musicObj.url;
+  }
+</script>
