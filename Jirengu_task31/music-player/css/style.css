@@ -14,7 +14,7 @@ body {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: url(../img/background.jpg) center center no-repeat;
+	background: black;
 	background-size: cover;
 }
 
@@ -33,22 +33,33 @@ body {
 	border: 1px solid #333333;
     padding: 20px 20px 5px 20px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1), 0 2px 10px 0 rgba(0,0,0,0.05);
-    background-color: rgba(255,255,255,0.9);
-    height: 450px;
+    background: url(../img/background.jpg) center center no-repeat;
+    height: 600px;
+    width: 400px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    align-items: center;
     z-index: 1;
+    position: relative;
+}
+
+.music-panel::before {
+    position: absolute;
+    background: url(../img/background.jpg) center center no-repeat;
+    height: 100%;
+    width: 100%;
+    content: '';
+    filter: blur(2px);
 }
 
 .musicbox .control {
 	margin-top: 20px;
 	font-size: 30px;
-	color: #ee8a87;
+	color: #f0666a;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
 }
 
 .musicbox .control .play-button {
@@ -68,6 +79,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    background: black;
 }
 
 .musicbox .info .title {
@@ -79,19 +91,24 @@ body {
 }
 
 .musicbox .progress {
-    width: 260px;
+    width: 100%;
 }
 
-.current-time {
+.time {
     float: right;
+    background-color: black;
 }
 
 .musicbox .progress .bar {
     height: 5px;
     margin: 15px 0 5px 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 247, 248,0.2);
     cursor: pointer;
     border-radius: 15px;
+}
+
+.music {
+	z-index: 10;
 }
 
 .music .progress .progress-now {
@@ -103,20 +120,35 @@ body {
 }
 
 .music .musicImgContent {
-   width:200px;
-   height: 200px;
-   border-radius: 110px;
-   background-color: #f0666a;
-   margin:auto;
-   opacity: 0.7;
-   border:solid 10px #ffffff;
-   animation: pinkPulse 3s infinite linear;
+    width: 290px;
+    height: 290px;
+    border-radius: 160px;
+    background-color: #f0666a;
+    margin: auto;
+    opacity: 0.85;
+    border: solid 10px #ffffff;
+    animation: pinkPulse 3s infinite linear;
 }
+
+.music .musicImg {
+    width: 220px;
+    height: 220px;
+    border-radius: 140px;
+    margin: auto;
+    animation: spin 20s infinite linear;
+    border: solid 30px black;
+    margin-left: 5px;
+}
+
+ @keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+ }
 
 @keyframes pinkPulse {
  from { border-color: #ffffff; box-shadow: 0 0 28px #ffffff; }
-  25% { border-color: #ffc7c9; box-shadow: 0 0 48px #ffc7c9; }
-  50% { border-color: #f9b3b5; box-shadow: 0 0 28px #f9b3b5; }
+  25% { border-color: #fff7f8; box-shadow: 0 0 48px #fff7f8; }
+  50% { border-color: #fcf2f3; box-shadow: 0 0 28px #fcf2f3; }
   75% { border-color: #ffe3e4; box-shadow: 0 0 48px #ffe3e4; }
   to { border-color: #ffffff; box-shadow: 0 0 28px #ffffff; }
 }

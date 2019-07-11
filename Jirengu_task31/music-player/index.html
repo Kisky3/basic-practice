@@ -15,13 +15,15 @@
              <div class="auther">auther</div>
            </div>
            <div class="musicImgContent">
-             <div class="musicImg"></div>
+             <div>
+              <img src="" class="musicImg" id="musicImg">
+             </div>
            </div>
            <div class="control">
              <span class="play-button">
                <i class="iconfont icon-xunhuanbofang"></i>
              </span>
-             <span class="play-button">
+             <span class="play-button" id="previous">
                <i class="iconfont icon-PrevioustrackFill"></i>
              </span>
              <span class="play-button" id="play">
@@ -55,38 +57,42 @@
   audio.autoplay = false;
   let playButton = document.getElementById('play');
   let nextButton = document.getElementById('next');
+  let previousButton = document.getElementById('previous');
+  let musicImg = document.getElementById('musicImg');
+
+  const playClassList = playButton.children[0].classList;
+  const nextClassList = nextButton.children[0].classList;
 
   $('.musicbox .musicImgContent').style.animationPlayState = "paused";
+  $('.musicbox .musicImg').style.animationPlayState = "paused";
 
   getMusicList(function(list) {
     musicList = list;
     loadMusic(list[currentIndex]);
   })
 
-
-  playButton.onclick = function(){
-    const playClassList = playButton.children[0].classList;
-    if(playClassList.contains('icon-PlayFilled')){
-       playClassList.remove('icon-PlayFilled');
-       playClassList.add('icon-PauseFilled');
+  playButton.onclick = function(){ 
+    if(playClassList.contains('icon-PlayFilled')){  
        audio.play();
     } else {
-       playClassList.remove('icon-PauseFilled');
-       playClassList.add('icon-PlayFilled');
        audio.pause();
     }
   }
 
   nextButton.onclick = function(){
-    const nextClassList = nextButton.children[0].classList;
-    
     if(musicList.length !== 0){
       currentIndex = (++currentIndex)%musicList.length;
-      alert(currentIndex);
       loadMusic(musicList[currentIndex]);
     }
-    
   }
+
+  previousButton.onclick = function(){
+    if(musicList.length !== 0){
+      currentIndex = (musicList.length + (--currentIndex))%musicList.length;
+      loadMusic(musicList[currentIndex]);
+    }
+  }
+
 
   audio.ontimeupdate = function(){
     $('.musicbox .progress-now').style.width = (this.currentTime/this.duration)*100 + '%';
@@ -94,10 +100,21 @@
     let sec = Math.floor(this.currentTime) % 60 + '';
     sec = sec.length === 2? sec : '0' + sec;
     $('.musicbox .time').innerText = min + ':' + sec;
-
-    $('.musicbox .musicImgContent').style.animationPlayState = "running";
-
   }
+
+  audio.addEventListener('playing',function(){ 
+    playClassList.remove('icon-PlayFilled');
+    playClassList.add('icon-PauseFilled');
+    $('.musicbox .musicImgContent').style.animationPlayState = "running";
+    $('.musicbox .musicImg').style.animationPlayState = "running";
+  });
+
+   audio.addEventListener('pause',function(){
+    playClassList.remove('icon-PauseFilled');
+    playClassList.add('icon-PlayFilled');
+    $('.musicbox .musicImgContent').style.animationPlayState = "paused";
+    $('.musicbox .musicImg').style.animationPlayState = "paused";
+  })
 
   audio.onplay = function() {
     clock = setInterval(function(){
@@ -116,6 +133,17 @@
     return document.querySelector(selector);
   }
 
+  function loadMusic(musicObj){
+    
+    $('.musicbox .title').innerText = musicObj.title;
+    $('.musicbox .auther').innerText = musicObj.auther;
+    
+    musicImg.src = musicObj.img;
+
+    audio.src = musicObj.url;
+    audio.play();
+  }
+
   function getMusicList(callback){
     const xhr = new XMLHttpRequest();
     xhr.open('GET','/getMusicList',true);
@@ -130,13 +158,5 @@
       console.log('网络异常');
     }
     xhr.send();
-  }
-
-  function loadMusic(musicObj){
-    console.log('begin play',musicObj);
-    $('.musicbox .title').innerText = musicObj.title;
-    $('.musicbox .auther').innerText = musicObj.auther;
-    
-    audio.src = musicObj.url;
   }
 </script>
