@@ -84,6 +84,7 @@ body {
 
 .musicbox .info .title {
 	font-size: 25px;
+	font-weight: bold;
 }
 
 .musicbox .info .auther {
@@ -100,7 +101,7 @@ body {
 }
 
 .musicbox .progress .bar {
-    height: 5px;
+    height: 8px;
     margin: 15px 0 5px 0;
     background-color: rgb(255, 247, 248,0.2);
     cursor: pointer;
@@ -113,7 +114,7 @@ body {
 
 .music .progress .progress-now {
 	background-color: #ee8a87;
-	height: 5px;
+	height: 8px;
 	width: 0;
 	position: relative;
 	border-radius: 15px;
