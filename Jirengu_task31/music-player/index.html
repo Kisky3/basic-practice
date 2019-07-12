@@ -50,10 +50,50 @@
   </body>
 </html>
 <script>
+  /* Delete mock date musicList when you run local host*/
+  const musicList = [
+    {
+        id: "01",
+        title: "Bye Bye Bye",
+        auther: "Lovestoned",
+        img: "https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/img/01.jpg",
+        url: "https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/music/ByeByeBye.mp3"
+    },
+    {
+        id: "02",
+        title: "Never Change",
+        auther: "Chase Coy",
+        img: "https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/img/02.jpg",
+        url: "https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/music/NeverChange.mp3"
+    },
+    {
+        id: "03",
+        title: "It Is You",
+        auther: "Tom Hugo",
+        img: "https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/img/03.jpg",
+        url: "https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/music/ItIsYou.mp3"
+    },
+     {
+        id: "04",
+        title: "Vendredi",
+        auther: "Tamas Wells",
+        img: "https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/img/04.jpg",
+        url: "https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/music/Vendredi.mp3"
+    },
+     {
+        id: "05",
+        title: "Stuttering",
+        auther: "Fefe Dobson",
+        img: "https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/img/05.jpg",
+        url: "https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/music/Stuttering.mp3"
+    },
+]
+
   let currentIndex = 0;
   const clock = null;
   const audio = new Audio();
-  let musicList = [];
+  /* Uncomment when you run local host*/
+  /*let musicList = [];*/
   audio.autoplay = false;
   let playButton = document.getElementById('play');
   let nextButton = document.getElementById('next');
@@ -65,11 +105,6 @@
 
   $('.musicbox .musicImgContent').style.animationPlayState = "paused";
   $('.musicbox .musicImg').style.animationPlayState = "paused";
-
-  getMusicList(function(list) {
-    musicList = list;
-    loadMusic(list[currentIndex]);
-  })
 
   playButton.onclick = function(){ 
     if(playClassList.contains('icon-PlayFilled')){  
@@ -144,6 +179,12 @@
     audio.play();
   }
 
+  getMusicList(function(musicList) {
+    /* Uncomment when you run local host*/
+    //musicList = list;
+    loadMusic(musicList[currentIndex]);
+  })
+
   function getMusicList(callback){
     const xhr = new XMLHttpRequest();
     xhr.open('GET','/getMusicList',true);
@@ -151,7 +192,10 @@
       if((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304){
         callback(JSON.parse(this.responseText));
       }else{
-        console.log('获取数据失败');
+        /* Uncomment when you run local host*/
+        /*console.log('获取数据失败');*/
+        /* comment out when you run local host*/
+        callback(JSON.parse(this.responseText));
       }
     }
     xhr.onerror = function(){
