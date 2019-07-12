@@ -18,7 +18,7 @@ server-sample
 ```
 
 ### preview
-<img src="../../preview_image/task_30.png">
+<img src="../../preview_image/task_30.png" style="width:400px">
 
 ### how to run
 1. download node.js

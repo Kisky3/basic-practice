@@ -24,7 +24,7 @@ music-player
 ```
 
 ### preview
-<img src="../../preview_image/task_31.png">
+<img src="../../preview_image/task_31.png" style="width:400px">
 
 ### how to run
 1. download node.js
