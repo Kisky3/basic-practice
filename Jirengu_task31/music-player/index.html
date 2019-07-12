@@ -179,28 +179,30 @@
     audio.play();
   }
 
-  getMusicList(function(musicList) {
-    /* Uncomment when you run local host*/
-    //musicList = list;
-    loadMusic(musicList[currentIndex]);
-  })
+  loadMusic(musicList[currentIndex]);
 
-  function getMusicList(callback){
+   /* Uncomment when you run local host*/
+  /*getMusicList(function(musicList) {
+   
+     musicList = list;
+    loadMusic(musicList[currentIndex]);
+  })*/
+
+  /*function getMusicList(callback){
     const xhr = new XMLHttpRequest();
     xhr.open('GET','/getMusicList',true);
     xhr.onload = function(){
       if((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304){
         callback(JSON.parse(this.responseText));
       }else{
-        /* Uncomment when you run local host*/
-        /*console.log('获取数据失败');*/
-        /* comment out when you run local host*/
-        callback(JSON.parse(musicList));
+        Uncomment when you run local host
+        console.log('获取数据失败');
+        comment out when you run local host
       }
     }
     xhr.onerror = function(){
       console.log('网络异常');
     }
     xhr.send();
-  }
+  }*/
 </script>
