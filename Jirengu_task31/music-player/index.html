@@ -107,7 +107,6 @@
   $('.musicbox .musicImg').style.animationPlayState = "paused";
 
   $('.musicbox .bar').onclick = function(e){
-    console.log(e);
     const percent = e.offsetX / parseInt(getComputedStyle(this).width);
     audio.currentTime = audio.duration * percent;
   }
@@ -135,7 +134,6 @@
   }
   
   audio.onended = function(){
-    console.log('end');
     currentIndex = (++currentIndex)%musicList.length;
     loadMusic(musicList[currentIndex]);
   }
@@ -161,15 +159,6 @@
     $('.musicbox .musicImgContent').style.animationPlayState = "paused";
     $('.musicbox .musicImg').style.animationPlayState = "paused";
   })
-
-  audio.onplay = function() {
-    clock = setInterval(function(){
-      let min = Math.floor(audio.currentTime/60);
-      let sec = Math.floor(audio.currentTime)%60 + '';
-      sec = sec.length ===2? sec : '0' + sec;
-      $('.musicbox .time').innerText = min + ':' + sec;
-    },1000)
-  }
 
   audio.onpause = function(){
     clearInterval(clock);
