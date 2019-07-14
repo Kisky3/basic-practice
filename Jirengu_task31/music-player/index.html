@@ -106,6 +106,12 @@
   $('.musicbox .musicImgContent').style.animationPlayState = "paused";
   $('.musicbox .musicImg').style.animationPlayState = "paused";
 
+  $('.musicbox .bar').onclick = function(e){
+    console.log(e);
+    const percent = e.offsetX / parseInt(getComputedStyle(this).width);
+    audio.currentTime = audio.duration * percent;
+  }
+
   playButton.onclick = function(){ 
     if(playClassList.contains('icon-PlayFilled')){  
        audio.play();
@@ -127,7 +133,12 @@
       loadMusic(musicList[currentIndex]);
     }
   }
-
+  
+  audio.onended = function(){
+    console.log('end');
+    currentIndex = (++currentIndex)%musicList.length;
+    loadMusic(musicList[currentIndex]);
+  }
 
   audio.ontimeupdate = function(){
     $('.musicbox .progress-now').style.width = (this.currentTime/this.duration)*100 + '%';
@@ -195,9 +206,7 @@
       if((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304){
         callback(JSON.parse(this.responseText));
       }else{
-        Uncomment when you run local host
         console.log('获取数据失败');
-        comment out when you run local host
       }
     }
     xhr.onerror = function(){
