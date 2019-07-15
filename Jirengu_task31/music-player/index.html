@@ -11,7 +11,15 @@
        <div class="music-panel">
          <div class="music">
            <div class="info">
-             <div class="title">My song example</div>
+             <div class="title-container">
+               <div class="icon-playing">
+                 <span class="line1"></span>
+                 <span class="line2"></span>
+                 <span class="line3"></span>
+                 <span class="line4"></span>
+               </div>
+               <div class="title">My song example</div>
+             </div>
              <div class="auther">auther</div>
            </div>
            <div class="musicImgContent">
@@ -20,8 +28,8 @@
              </div>
            </div>
            <div class="control">
-             <span class="play-button">
-               <i class="iconfont icon-xunhuanbofang"></i>
+             <span class="play-button" id="list">
+               <i class="iconfont icon-list1"></i>
              </span>
              <span class="play-button" id="previous">
                <i class="iconfont icon-PrevioustrackFill"></i>
@@ -32,8 +40,12 @@
              <span class="play-button" id="next">
                <i class="iconfont icon-NexttrackFilled"></i>
              </span>
+             <span class="play-button">
+               <i class="iconfont icon-xunhuanbofang"></i>
+             </span>
            </div>
-
+           <ul id="music-list-content" class="music-list-content">     
+           </ul>
          <div class="progress">
            <div class="bar">
              <div class="progress-total"></div>
@@ -43,9 +55,6 @@
          <div class="time">0:00</div>
          </div>
        </div>
-       <ul class="list">
-         
-       </ul>
      </div>
   </body>
 </html>
@@ -98,7 +107,11 @@
   let playButton = document.getElementById('play');
   let nextButton = document.getElementById('next');
   let previousButton = document.getElementById('previous');
+  let listButton = document.getElementById('list');
   let musicImg = document.getElementById('musicImg');
+  let musicListItems = [];
+  let musicListContent = document.getElementById('music-list-content');
+  let musicListContentLiTag = musicListContent.getElementsByTagName('li');
 
   const playClassList = playButton.children[0].classList;
   const nextClassList = nextButton.children[0].classList;
@@ -109,6 +122,31 @@
   $('.musicbox .bar').onclick = function(e){
     const percent = e.offsetX / parseInt(getComputedStyle(this).width);
     audio.currentTime = audio.duration * percent;
+  }
+  
+  $('.title-container .icon-playing').onclick = function(){
+    showMusicList();
+  }
+  
+  function showMusicList() {
+    if(musicListContent.style.display === ''){
+       musicListContent.style.display = 'inline-block';
+    } else {
+      musicListContent.style.display = '';
+    }
+  }
+
+  function createMusicList() {
+    if(musicList.length !== 0){
+       musicList.forEach(function(value){
+         musicListItems.push('<li>'+ value.title + '</li>');
+       });
+      musicListContent.innerHTML = musicListItems.join('');
+    }
+  }
+
+  listButton.onclick = function() {
+    showMusicList();
   }
 
   playButton.onclick = function(){ 
@@ -149,15 +187,23 @@
   audio.addEventListener('playing',function(){ 
     playClassList.remove('icon-PlayFilled');
     playClassList.add('icon-PauseFilled');
+    //run music background animation
     $('.musicbox .musicImgContent').style.animationPlayState = "running";
     $('.musicbox .musicImg').style.animationPlayState = "running";
+    
+    //start music mark animation 
+    $('.title-container .icon-playing').style.display = "inline-block";
   });
 
    audio.addEventListener('pause',function(){
     playClassList.remove('icon-PauseFilled');
     playClassList.add('icon-PlayFilled');
+    //pause music background animation
     $('.musicbox .musicImgContent').style.animationPlayState = "paused";
     $('.musicbox .musicImg').style.animationPlayState = "paused";
+
+    //stop music mark animation 
+    $('.title-container .icon-playing').style.display = "none";
   })
 
   audio.onpause = function(){
@@ -168,8 +214,7 @@
     return document.querySelector(selector);
   }
 
-  function loadMusic(musicObj){
-    
+  function loadMusic(musicObj){  
     $('.musicbox .title').innerText = musicObj.title;
     $('.musicbox .auther').innerText = musicObj.auther;
     
@@ -179,11 +224,23 @@
     audio.play();
   }
 
-  loadMusic(musicList[currentIndex]);
+  function clickMusicItem(){
+   for(var i=0;i<musicListContentLiTag.length;i++){
+     musicListContentLiTag[i].onclick=(function(i){ 
+  　　  return function(){
+          currentIndex = i;
+  　　    loadMusic(musicList[currentIndex]);
+  　　  }
+     }(i))
+　　}
+  }
 
-   /* Uncomment when you run local host*/
-  /*getMusicList(function(musicList) {
-   
+  loadMusic(musicList[currentIndex]);
+  createMusicList();
+  clickMusicItem();
+
+  /* Uncomment when you run local host*/
+  /*getMusicList(function(musicList) { 
      musicList = list;
     loadMusic(musicList[currentIndex]);
   })*/
