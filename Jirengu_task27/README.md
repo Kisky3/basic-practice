@@ -4,7 +4,6 @@ I made small modal sample about login&register with js html and css
 ### structure tree
 ```
 |——index.html
-|——common.js
 |——style.css
 ```
 
