@@ -74,6 +74,7 @@ music-player
 
 ### preview
 [Preview](https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/index.html)
+<br>
 <img src="./preview_image/task_31.png" style="width:400px">
 
 ### how to run
