@@ -10,7 +10,7 @@ This is a index page of LOL game ( League of Legends)
 
 ### preview
 [Preview](https://kisky3.github.io/Jirengu/Jirengu_task13/index)
-<br>
+<br> 
 <img src="./preview_image/task_13.png" style="width:400px">
 
 ***
