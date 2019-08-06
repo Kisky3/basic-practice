@@ -62,8 +62,8 @@ node server.js
 
 ***
 ## Jirengu/Jirengu_task31/
-I made a simple music player with JS audio API
-This is just a practice coding about node.js & express
+I made a simple music player with JS audio API.
+This is just a practice coding about node.js & express.
 
 ### structure tree
 ```
