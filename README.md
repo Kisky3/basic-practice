@@ -30,7 +30,7 @@ I made small modal sample about login&register with js html and css.
 
 ***
 ## Jirengu/Jirengu_task30/
-This is a practice coding about node.js & express
+This is a practice coding about node.js & express.
 
 ### structure tree
 
