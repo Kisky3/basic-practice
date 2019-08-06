@@ -1,6 +1,6 @@
 # HomeWork & Practice of Jirengu Class
 
-## Jirengu/Jirengu_task8/
+## Jirengu/Jirengu_task8/ 
 This is a practice of iconfont, no preview.
 
 ***
@@ -16,7 +16,7 @@ This is a index page of LOL game ( League of Legends)
 ***
 
 ## Jirengu/Jirengu_task27/
-I made small modal sample about login&register with js html and css
+I made small modal sample about login&register with js html and css.
 
 ### structure tree
 ```
