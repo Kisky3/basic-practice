@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="https://at.alicdn.com/t/font_1349722_caa2evl4f3v.js"></script>
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1349722_caa2evl4f3v.css">
+  <link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div class="box">
+    <p>click me:</p>
+    <svg class="icon" aria-hidden="true">
+      <use xlink:href="#icon-Arrowturn"></use>
+    </svg>
+    <svg class="icon" aria-hidden="true">
+      <use id="button" xlink:href="#icon-food-popsicle"></use>
+    </svg>
+    </div>
+</body>
+<script>
+  $('#button').click(function(){
+  ($(this).attr('xlink:href') === "#icon-food-popsicle")
+    ?$(this).attr('xlink:href','#icon-food-strawberry')
+    :$(this).attr('xlink:href','#icon-food-popsicle');
+})
+</script>
+</html>
