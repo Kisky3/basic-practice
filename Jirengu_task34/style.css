@@ -2,8 +2,14 @@
   box-sizing:border-box;
 }
 
+label {
+  font-size: 20px;
+  color: black;
+  font-weight:bold;
+}
+
 .mod-tab {
-  margin-top: 30px;
+  margin: 40px 0;
 }
 
 .mod-tab .header:after{
