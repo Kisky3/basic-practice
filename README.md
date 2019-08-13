@@ -111,7 +111,7 @@ This is a index page of tabs which were made by Js or jQuery
 ```
 
 ### preview
-[Preview](https://kisky3.github.io/Jirengu/Jirengu_task34/index)
+[Preview](https://kisky3.github.io/Jirengu/Jirengu_task34/index.html)
 <br> 
 <img src="./preview_image/task_34.png" style="width:400px">
 
@@ -127,6 +127,6 @@ This is a sample of how to swich cute icon with jQuery.And I also used colorful 
 ```
 
 ### preview
-[Preview](https://kisky3.github.io/Jirengu/Jirengu_task35/index)
+[Preview](https://kisky3.github.io/Jirengu/Jirengu_task35/index.html)
 <br> 
 <img src="./preview_image/task_35.png" style="width:400px">
