@@ -1,4 +1,4 @@
-## Jirengu/Jirengu_task34/
+## Jirengu/Jirengu_task35/
 This is a sample of how to swich cute icon with jQuery.And I also used colorful Icon Font.
 
 ### structure tree
