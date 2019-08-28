@@ -441,3 +441,42 @@
    .swiper-button-next {
        background-image: url("../img/swiper_next.svg") !important;
    }
+
+   .price_image {
+       width: 160px;
+       height: 160px;
+       position: relative;
+       overflow: hidden;
+       display: flex;
+       justify-content: center;
+   }
+
+   .price_image img {
+       position: absolute;
+       bottom: 0;
+   }
+
+   .price_size_text {
+       font-size: 12px;
+       color: rgba(66, 66, 66, 0.70);
+       letter-spacing: 0;
+       text-align: center;
+       margin: 5px 0;
+   }
+
+   .price_text {
+       font-size: 18px;
+       color: #424242;
+       letter-spacing: 0;
+       text-align: center;
+   }
+
+   .peice_label {
+       border: 1px solid rgba(66, 66, 66, 0.20);
+       letter-spacing: 0;
+       text-align: center;
+       width: 220px;
+       height: 102px;
+       border-radius: 8px;
+       margin: auto;
+   }
