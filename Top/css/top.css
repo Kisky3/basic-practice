@@ -508,16 +508,36 @@
    .faq_container {
        width: 65%;
        border: solid red 2px;
+       margin: auto;
    }
 
    .drop {
-       cursor: pointer;
-       display: block;
-       background: #090;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+   }
+
+   .drop_text {
+       display: flex;
+       justify-content: start;
+       align-items: center;
+   }
+
+   .drop_text img {
+       margin-right: 10px;
+   }
+
+   .drop_text div {
+       font-size: 16px;
+       color: #424242;
+       letter-spacing: 0;
    }
 
    .drop+input {
        display: none;
+       width: 30px;
+       height: 30px;
+       background-color: red;
        /* hide the checkboxes */
    }
 
@@ -525,6 +545,23 @@
        display: none;
    }
 
+   .drop+input+span {
+       display: block;
+   }
+
    .drop+input:checked+div {
        display: block;
+       padding: 0 0 30px 30px;
+   }
+
+   .drop+input:checked+span {
+       display: block;
+   }
+
+   .drop_cross {
+       position: relative;
+       cursor: pointer;
+       width: 25px;
+       height: 4px;
+       background-color: #4EB5AC;
    }

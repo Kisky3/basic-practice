@@ -20,3 +20,7 @@ var mySwiper = new Swiper('.swiper-container', {
     autoplay: false,
     spaceBetween: 10
 })
+
+$('#dropCross').click(function() {
+    alert('クリックされました！');
+})
