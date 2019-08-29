@@ -262,12 +262,12 @@
    }
 
    section label {
-       width: 250px;
        padding: 0px;
        display: flex;
        justify-content: flex-start;
        align-items: center;
        margin-bottom: 25px;
+       white-space: nowrap;
    }
 
    section label .border {
@@ -293,9 +293,11 @@
        display: flex;
        align-items: center;
        justify-content: center;
+       min-width: 160px;
+       min-height: 160px;
    }
 
-   section .column span {
+   section .column .use_number {
        position: absolute;
        font-size: 32px;
        color: #68C0B8;
@@ -479,4 +481,9 @@
        height: 102px;
        border-radius: 8px;
        margin: auto;
+   }
+
+   .red {
+       color: #E67171;
+       letter-spacing: 0;
    }

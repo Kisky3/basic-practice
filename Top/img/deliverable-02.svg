@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="87px" height="94px" viewBox="0 0 87 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>重さ</title>
+    <desc>Created with Sketch.</desc>
+    <g id="✅-Form" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="form---luggage---about" transform="translate(-351.000000, -334.000000)">
+            <g id="重さ" transform="translate(351.000000, 336.000000)">
+                <rect id="Rectangle" fill="#575757" x="66" y="88" width="11" height="4" rx="1"></rect>
+                <rect id="Rectangle" fill="#979797" x="0" y="82" width="77" height="6" rx="2"></rect>
+                <rect id="Rectangle" fill="#575757" x="0" y="88" width="11" height="4" rx="1"></rect>
+                <circle id="Oval" stroke="#979797" stroke-width="3" fill="#FFFFFF" cx="67" cy="18" r="18"></circle>
+                <rect id="Rectangle" fill="#979797" x="64.5" y="35" width="4" height="47"></rect>
+                <g id="バッグ" transform="translate(14.000000, 40.000000)">
+                    <circle id="Oval" fill="#68C0B8" cx="8" cy="39" r="2"></circle>
+                    <circle id="Oval" fill="#68C0B8" cx="32" cy="39" r="2"></circle>
+                    <rect id="Rectangle" fill="#83CBC5" x="0" y="5" width="39" height="34" rx="3"></rect>
+                    <path d="M10,5 L10,39" id="Line-6" stroke="#CAE9E6" stroke-width="3"></path>
+                    <path d="M29,5 L29,39" id="Line-6" stroke="#CAE9E6" stroke-width="3"></path>
+                    <g id="取手" transform="translate(14.000000, 0.000000)" stroke="#68C0B8" stroke-linecap="square">
+                        <path d="M0.5,0.5 L10.5,0.5" id="Line-5" stroke-width="3"></path>
+                        <path d="M10.5,6 L10.5,0.5" id="Line-4"></path>
+                        <path d="M0.5,6 L0.5,0.5" id="Line-2"></path>
+                    </g>
+                    <g id="タグ" transform="translate(24.000000, 5.000000)">
+                        <path d="M0.5,0 L3.5,2.5" id="Line-7" stroke="#EB8D8D" stroke-width="2" stroke-linecap="square"></path>
+                        <polygon id="Path-45" fill="#EB8D8D" points="6.67367211 13.5 12.072927 9.5131191 8 3.24432613 3.5 3.24432613 2 6.94117229"></polygon>
+                    </g>
+                </g>
+                <g id="めもり" transform="translate(49.000000, 1.500000)" stroke="#979797" stroke-linecap="square">
+                    <path d="M17.5,0 L17.5,2.84547982 M17.5,30.5459193 L17.5,33.5" id="Shape"></path>
+                    <path d="M31.7894192,8.25 L29.4358452,9.60883654 M5.44725617,23.4586549 L2.77756814,25" id="Shape"></path>
+                    <path d="M16.9665064,0.308012702 L16.9665064,3.22430359 M16.9665064,30.8523843 L16.9665064,33.8080127" id="Shape" transform="translate(17.466506, 17.058013) scale(-1, 1) rotate(60.000000) translate(-17.466506, -17.058013) "></path>
+                    <path d="M9.25,2.21058084 L10.6673258,4.66546106 M24.2010052,28.1064815 L26,31.2224319" id="Shape"></path>
+                    <path d="M0,16.5 L2.73860345,16.5 M32.0759249,16.5 L34.5,16.5" id="Shape"></path>
+                    <path d="M25.75,2.21058084 L24.5330075,4.31847366 M10.4273855,28.7501277 L9,31.2224319" id="Shape"></path>
+                </g>
+                <polyline id="Line-8" stroke="#DB5F5F" stroke-width="1.5" stroke-linecap="square" points="66.8080127 18 72.7787427 21.8078682 77 24.5"></polyline>
+                <circle id="Oval" fill="#777676" cx="66.5" cy="18" r="2.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
