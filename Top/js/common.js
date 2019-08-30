@@ -21,6 +21,7 @@ var mySwiper = new Swiper('.swiper-container', {
     spaceBetween: 10
 })
 
+/* FAQ drop mark open&close */
 $('span[id^="dropcross"]').click(function() {
     ($(this).attr('class') === "drop_cross_open") ?
     $(this).attr('class', 'drop_cross_close'): $(this).attr('class', 'drop_cross_open');
