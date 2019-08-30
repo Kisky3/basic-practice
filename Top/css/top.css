@@ -16,7 +16,7 @@
 
    a {
        color: #4a4a4a;
-       text-decoration: underline;
+       text-decoration: none;
    }
 
    html {
@@ -200,8 +200,16 @@
    }
 
    /* Reserve Button */
+   .reserve_container {
+       top: 80%;
+       z-index: 10;
+       position: sticky;
+       position: -webkit-sticky;
+       left: 90%;
+       width: 90px;
+   }
+
    .reserve_btn {
-       position: fixed;
        right: 48px;
        z-index: 10;
        display: none;
@@ -210,18 +218,19 @@
 
    /* SNS Tab */
    .sns_tab {
-       position: fixed;
        display: none;
-       right: 0;
        top: 20%;
        background: #FAFAFA;
        border-radius: 4px 0 0 4px;
        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
-       display: flex;
        align-items: center;
        justify-content: space-around;
        flex-direction: column;
        z-index: 10;
+       position: sticky;
+       position: -webkit-sticky;
+       width: 48px;
+       left: 100%;
    }
 
    .sns_tab img {
@@ -232,7 +241,6 @@
 
    /* Navigation Bar */
    .nav {
-       position: fixed;
        display: none;
        list-style-type: none;
        margin: 0;
@@ -245,6 +253,8 @@
        top: 0;
        width: 100%;
        z-index: 10;
+       position: fixed;
+       max-width: 1441px;
    }
 
    .nav li:first-child {
@@ -321,15 +331,6 @@
    section .column {
        padding: 25px;
        position: relative;
-   }
-
-   section .column .column_image {
-       margin: auto;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       min-width: 160px;
-       min-height: 160px;
    }
 
    section .column .use_number {

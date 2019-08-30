@@ -10,8 +10,8 @@ window.onscroll = function() {
     /* SNS Tab */
     var sns_tab = document.getElementById('sns_tab');
 
-    /* If top > 400 show navigation bar*/
-    if (top > 400) {
+    /* If top > 380 show navigation bar*/
+    if (top > 380) {
         topbar.style.display = 'block';
     } else {
         topbar.style.display = 'none';
@@ -19,7 +19,7 @@ window.onscroll = function() {
 
     /* If top > 500 show reserve button */
     if (top > 500) {
-        reserve_btn.style.display = 'block';
+        reserve_btn.style.display = 'flex';
     } else {
         reserve_btn.style.display = 'none';
     }
