@@ -49,3 +49,21 @@ $('span[id^="dropcross"]').click(function() {
     ($(this).attr('class') === "drop_cross_open") ?
     $(this).attr('class', 'drop_cross_close'): $(this).attr('class', 'drop_cross_open');
 });
+
+
+/*
+window.onload = function() {
+    var modal = document.getElementById("mask");
+    var line = document.getElementById("line");
+    var bt = document.getElementById("bt");
+    var btclose = document.getElementById("btclose");
+
+    bt.onclick = function() {
+        zhezhao.style.display = "block";
+        login.style.display = "block";
+    }
+    btclose.onclick = function() {
+        zhezhao.style.display = "none";
+        login.style.display = "none";
+    }
+}*/
