@@ -1,11 +1,24 @@
 /* navigation bar animation control */
 window.onscroll = function() {
     var top = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-    var node = document.getElementById('topbar');
+    /* Topbar */
+    var topbar = document.getElementById('topbar');
+
+    /* Reserve Button */
+    var reserve_btn = document.getElementById('reserve_btn');
+
+    /* If top > 400 show navigation bar*/
     if (top > 400) {
-        node.style.display = 'block';
+        topbar.style.display = 'block';
     } else {
-        node.style.display = 'none';
+        topbar.style.display = 'none';
+    }
+
+    /* If top > 500 show reserve button */
+    if (top > 400) {
+        reserve_btn.style.display = 'block';
+    } else {
+        reserve_btn.style.display = 'none';
     }
 }
 
