@@ -74,6 +74,7 @@
        position: absolute;
        right: 50px;
        margin-top: 20px;
+       text-decoration: underline;
    }
 
    header .top_form_title {
@@ -347,6 +348,13 @@
        text-align: center;
        margin: 20px 0 10px;
        font-weight: normal;
+   }
+
+   section .column_image {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 160px;
    }
 
    section .underline {
