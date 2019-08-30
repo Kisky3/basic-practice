@@ -503,11 +503,11 @@
        text-align: center;
        line-height: 77px;
        font-family: AvenirNext-DemiBoldItalic;
+       margin-bottom: 60px;
    }
 
    .faq_container {
        width: 65%;
-       border: solid red 2px;
        margin: auto;
    }
 
@@ -521,10 +521,11 @@
        display: flex;
        justify-content: start;
        align-items: center;
+       margin-bottom: 30px;
    }
 
    .drop_text img {
-       margin-right: 10px;
+       margin-right: 25px;
    }
 
    .drop_text div {
@@ -537,7 +538,6 @@
        display: none;
        width: 30px;
        height: 30px;
-       background-color: red;
        /* hide the checkboxes */
    }
 
@@ -545,23 +545,49 @@
        display: none;
    }
 
-   .drop+input+span {
-       display: block;
-   }
-
    .drop+input:checked+div {
        display: block;
-       padding: 0 0 30px 30px;
+       padding: 0 0 50px 50px;
+       font-size: 15px;
+       color: #56BDAE;
+       letter-spacing: 0;
+       animation: fade-in 2s ease;
    }
 
-   .drop+input:checked+span {
-       display: block;
+   @keyframes fade-in {
+       0% {
+           opacity: 0
+       }
+
+       100% {
+           opacity: 1
+       }
    }
 
-   .drop_cross {
+   .drop_cross_close {
+       position: relative;
+       cursor: pointer;
+       width: 4px;
+       height: 25px;
+       background-color: #4EB5AC;
+   }
+
+   .drop_cross_close:before {
+       content: '';
+       position: absolute;
+       cursor: pointer;
+       width: 25px;
+       height: 4px;
+       background-color: #4EB5AC;
+       top: 10px;
+       left: -10px;
+   }
+
+   .drop_cross_open {
        position: relative;
        cursor: pointer;
        width: 25px;
        height: 4px;
        background-color: #4EB5AC;
+       right: -11px;
    }
