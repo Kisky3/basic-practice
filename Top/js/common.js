@@ -7,6 +7,9 @@ window.onscroll = function() {
     /* Reserve Button */
     var reserve_btn = document.getElementById('reserve_btn');
 
+    /* SNS Tab */
+    var sns_tab = document.getElementById('sns_tab');
+
     /* If top > 400 show navigation bar*/
     if (top > 400) {
         topbar.style.display = 'block';
@@ -15,10 +18,17 @@ window.onscroll = function() {
     }
 
     /* If top > 500 show reserve button */
-    if (top > 400) {
+    if (top > 500) {
         reserve_btn.style.display = 'block';
     } else {
         reserve_btn.style.display = 'none';
+    }
+
+    /* If top > 500 show sns tab */
+    if (top > 500) {
+        sns_tab.style.display = 'flex';
+    } else {
+        sns_tab.style.display = 'none';
     }
 }
 

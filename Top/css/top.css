@@ -202,15 +202,16 @@
    /* Reserve Button */
    .reserve_btn {
        position: fixed;
-       right: 15px;
+       right: 48px;
        z-index: 10;
        display: none;
-       bottom: 0;
+       bottom: 48px;
    }
 
    /* SNS Tab */
    .sns_tab {
        position: fixed;
+       display: none;
        right: 0;
        top: 20%;
        background: #FAFAFA;
