@@ -18,14 +18,14 @@ window.onscroll = function() {
     }
 
     /* If top > 500 show reserve button */
-    if (top > 500) {
+    if (top > 700) {
         reserve_btn.style.display = 'flex';
     } else {
         reserve_btn.style.display = 'none';
     }
 
     /* If top > 500 show sns tab */
-    if (top > 500) {
+    if (top > 700) {
         sns_tab.style.display = 'flex';
     } else {
         sns_tab.style.display = 'none';

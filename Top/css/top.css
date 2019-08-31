@@ -84,7 +84,8 @@
        border-radius: 9px;
        box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
        z-index: 2;
-       margin-top: 110px;
+       top: 110px;
+       position: absolute;
    }
 
    header .top_form p {
@@ -172,9 +173,12 @@
        align-items: self-start;
        flex-direction: column;
        width: 500px;
+       position: absolute;
+       top: 150px;
    }
 
-   header .header_content .title {
+   header .header_content .title,
+   .contact_container .title {
        color: #fff;
        font-size: 44px;
        letter-spacing: 0;
@@ -182,38 +186,18 @@
        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
    }
 
-   header .header_content .subtitle {
+   .contact_container .title {
+       font-size: 36px;
+   }
+
+   header .header_content .subtitle,
+   .contact_container .subtitle {
        font-size: 17px;
        color: #fff;
        letter-spacing: 0;
        line-height: 33px;
        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
        text-align: left;
-   }
-
-   .content {
-       position: absolute;
-       top: 40%;
-       left: 30%;
-       transform: translate(-50%, -50%);
-       z-index: 2;
-   }
-
-   .content .title {
-       color: #fff;
-       font-size: 44px;
-       letter-spacing: 0;
-       line-height: 77px;
-       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
-   }
-
-   .content .subtitle {
-       font-size: 17px;
-       color: #fff;
-       letter-spacing: 0;
-       line-height: 33px;
-       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
-       width: 400px;
    }
 
    .top_language {
@@ -336,42 +320,6 @@
        color: rgba(0, 0, 0, 0.4);
    }
 
-
-   .zhezhao {
-       width: 100%;
-       height: 100%;
-       background-color: #000;
-       filter: alpha(opacity=50);
-       -moz-opacity: 0.5;
-       opacity: 0.5;
-       position: absolute;
-       left: 0px;
-       top: 0px;
-       display: none;
-       z-index: 1000;
-   }
-
-   .login {
-       width: 280px;
-       height: 180px;
-       position: absolute;
-       top: 200px;
-       left: 50%;
-       background-color: #000;
-       margin-left: -140px;
-       display: none;
-       z-index: 1500;
-   }
-
-   .content {
-       margin-top: 50px;
-       color: red;
-       line-height: 200px;
-       height: 200px;
-       text-align: center;
-   }
-
-
    /* Main Container background: white full size */
    main {
        width: 100%;
@@ -417,6 +365,7 @@
    section .column {
        padding: 25px;
        position: relative;
+       text-align: center;
    }
 
    section .column .use_number {
@@ -472,6 +421,12 @@
        max-height: 126px;
    }
 
+   section .safe_content_container {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+
    section .safe_content_text {
        padding: 20px;
        display: flex;
@@ -503,13 +458,25 @@
    }
 
    /* 「Just ask anything not sure」Contact Container */
-   .contact_container {
-
+   .contact_container,
+   .customer_container {
        position: relative;
        width: 100%;
+       background-repeat: no-repeat;
        display: flex;
        justify-content: center;
        align-items: center;
+       min-height: 502px;
+   }
+
+   .contact_container {
+       background-image: url('../img/contact_background.svg');
+       justify-content: start;
+       padding: 100px;
+   }
+
+   .customer_container {
+       background-image: url('../img/customer_voice.svg');
    }
 
    .contact_button {
@@ -530,7 +497,7 @@
 
    .customer_content .title {
        color: #fff;
-       font-size: 40px;
+       font-size: 36px;
        letter-spacing: 0;
        line-height: 77px;
        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
@@ -835,4 +802,35 @@
        right: 15px;
        font-size: 40px;
        color: rgba(66, 66, 66, 0.7);
+   }
+
+
+   /*  Mobile */
+   @media screen and (max-width: 768px) {
+
+       header .header_content {
+           top: 0;
+       }
+
+       header .column_flex_end {
+           justify-content: center;
+       }
+
+       header .top_form {
+           position: absolute;
+           top: 250px;
+       }
+
+       header .header_content .title {
+           position: absolute;
+           top: 100px;
+       }
+
+       header .header_content .subtitle {
+           display: none;
+       }
+
+       main {
+           margin-top: 120px;
+       }
    }
