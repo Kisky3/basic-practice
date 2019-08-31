@@ -187,7 +187,6 @@
        font-size: 44px;
        letter-spacing: 0;
        line-height: 77px;
-       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
    }
 
    .contact_container .title {
@@ -200,7 +199,6 @@
        color: #fff;
        letter-spacing: 0;
        line-height: 33px;
-       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
        text-align: left;
    }
 
@@ -382,10 +380,11 @@
 
    section .column .title {
        font-size: 20px;
-       color: rgba(0, 0, 0, 0.8);
+       color: ;
        text-align: center;
-       margin: 20px 0 10px;
+       margin: 45px 0 20px;
        font-weight: normal;
+       font-weight: bold;
    }
 
    section .column_image {
@@ -936,15 +935,16 @@
            text-align: center;
        }
 
+
        .top_form_content._space {
-           margin-top: 11px;
+           margin-top: 5px;
        }
 
        .top_form_content {
            display: flex;
            justify-content: center;
            align-self: center;
-           padding: 15px 34px 0;
+           padding: 15px 10px 0;
        }
 
        .top_form_content label {
@@ -953,8 +953,7 @@
            font-weight: bold;
            display: flex;
            align-items: center;
-           width: 55px;
-           margin-right: 20px;
+           width: 45px;
        }
 
        .top_form_button.active {
@@ -986,7 +985,96 @@
            border-radius: 8px;
            font-size: 16px;
            border: none;
-           margin: 10px 20px;
+           margin: 15px 20px;
+       }
+
+       section label {
+           padding: 0px;
+           display: flex;
+           justify-content: center;
+           flex-direction: column;
+           align-items: center;
+           margin-bottom: 25px;
+           white-space: nowrap;
+           position: relative;
+       }
+
+       section label p {
+           margin-left: 0;
+       }
+
+       section label .border {
+           width: 30px;
+           height: 3px;
+           background-color: #68C0B8;
+           position: absolute;
+           top: 50px;
+       }
+
+       section .column {
+           margin-top: 50px;
+       }
+
+       section .column .use_number {
+           position: absolute;
+           font-size: 32px;
+           color: #68C0B8;
+           top: 0;
+           right: 250px;
+           font-weight: bold;
+           right: '' !important;
+       }
+
+
+       section .column .title {
+           font-size: 18px;
+           color: #424242;
+           text-align: center;
+           margin: 45px 0 20px;
+           font-weight: normal;
+           font-weight: bold;
+       }
+
+       section .column p {
+           font-size: 13px;
+           color: #424242;
+           line-height: 24px;
+       }
+
+       .contact_container {
+           background-image: url('../img/contact_background_mobile.svg');
+           background-repeat: no-repeat;
+           background-size: contain;
+           padding: 0;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           flex-direction: column;
+           min-height: 400px;
+       }
+
+       .contact_text {
+           margin-top: 190px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+       }
+
+       .contact_container .title {
+           font-size: 22px;
+           color: #424242;
+           letter-spacing: 0;
+           text-align: center;
+           line-height: 46.08px;
+       }
+
+       .contact_container .subtitle {
+           font-size: 14px;
+           color: #424242;
+           letter-spacing: 0;
+           text-align: center;
+           line-height: 33px;
        }
 
 
