@@ -130,6 +130,25 @@ $('#top_menu_open').click(function() {
     }
 })
 
+/*Mobile Top Language Open & Close */
+$('#language_open').click(function() {
+    if ($(this).attr('src') === "./img/icon_earth.svg") {
+        $(this).attr('src', './img/top_menu_cross.svg');
+        $('#top_language_modal').slideDown(200);
+    } else {
+        $(this).attr('src', './img/icon_earth.svg');
+        $('#top_language_modal').slideUp(200);
+
+    }
+})
+
+/* Close Mobile Top Language after clicking */
+$('#top_language_modal').click(function() {
+    $('#top_language_modal').hide();
+    $('#language_open').attr('src', './img/icon_earth.svg');
+})
+
+/* Close Mobile Top Menu after clicking */
 $('#top_menu_modal').click(function() {
     $('#top_menu_modal').hide();
     $('#top_menu_open').attr('src', './img/top_menu_open.svg');
