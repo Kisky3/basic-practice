@@ -33,6 +33,7 @@
 
    .full_background {
        width: 100%;
+       position: relative;
    }
 
    /* HEADER */
@@ -42,7 +43,9 @@
        padding: 0;
        width: 100%;
        max-width: 1441px;
-       min-height: 500px;
+       background-image: url('../img/header_background.png');
+       background-repeat: no-repeat;
+       min-height: 550px;
    }
 
    header .top_bar {
@@ -52,29 +55,48 @@
        align-items: center;
        justify-content: space-between;
        padding: 20px 52px 0;
+       z-index: 2;
+   }
+
+   header .columns {
+       position: absolute;
+       z-index: 2;
+       width: 100%;
+       left: 0;
+       top: 0;
+       text-align: center;
+   }
+
+   header .column {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   header .column_flex_end {
+       justify-content: flex-end;
    }
 
    header .top_form {
-       position: absolute;
        width: 509px;
        height: 390px;
-       right: 12%;
-       top: 80px;
        background: rgba(255, 255, 255, 0.98);
        border-radius: 9px;
        box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+       z-index: 2;
+       margin-top: 110px;
    }
 
    header .top_form p {
-       position: absolute;
        right: 50px;
+       z-index: 2;
    }
 
    header .top_form a {
-       position: absolute;
        right: 50px;
        margin-top: 20px;
        text-decoration: underline;
+       z-index: 2;
    }
 
    header .top_form_title {
@@ -90,6 +112,7 @@
        color: #424242;
        letter-spacing: 0;
        text-align: center;
+       z-index: 2;
    }
 
    header .top_form_content._space {
@@ -143,11 +166,37 @@
        border: none;
    }
 
+   header .header_content {
+       display: flex;
+       justify-content: center;
+       align-items: self-start;
+       flex-direction: column;
+       width: 500px;
+   }
+
+   header .header_content .title {
+       color: #fff;
+       font-size: 44px;
+       letter-spacing: 0;
+       line-height: 77px;
+       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+   }
+
+   header .header_content .subtitle {
+       font-size: 17px;
+       color: #fff;
+       letter-spacing: 0;
+       line-height: 33px;
+       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+       text-align: left;
+   }
+
    .content {
        position: absolute;
        top: 40%;
        left: 30%;
        transform: translate(-50%, -50%);
+       z-index: 2;
    }
 
    .content .title {
@@ -159,9 +208,8 @@
    }
 
    .content .subtitle {
-       font-family: Helvetica;
        font-size: 17px;
-       color: #FFFFFF;
+       color: #fff;
        letter-spacing: 0;
        line-height: 33px;
        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
@@ -762,11 +810,11 @@
    }
 
    .form_img_content {
-     min-width: 237px;
-     min-height: 274px;
-     justify-content: center;
-     display: flex;
-     align-items: center;
+       min-width: 237px;
+       min-height: 274px;
+       justify-content: center;
+       display: flex;
+       align-items: center;
    }
 
    .contact_form .hr {

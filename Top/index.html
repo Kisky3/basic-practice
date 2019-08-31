@@ -22,29 +22,35 @@
                 <div class="triangle"></div>
             </div>
         </div>
-        <div class="content">
-            <div class="title">Japanese City Check-in</div>
-            <div class="subtitle">Fully Enjoy Your Trip even in your last day by get free by your Luggage!!</div>
+        <div class="columns">
+            <div class="column column_flex_end">
+                <div class="header_content">
+                    <div class="title">Japanese City Check-in</div>
+                    <div class="subtitle">Fully Enjoy Your Trip even in your last day by get free by your Luggage!!</div>
+                </div>
+            </div>
+            <div class="column">
+                <!-- Reserve Form-->
+                <form class="top_form" method="post" action="#" id="reserve_form">
+                    <span class="top_form_title">Reserve now</span>
+                    <div class="top_form_content  _space">
+                        <label>From</label>
+                        <button class="top_form_button active">Hotel</button>
+                        <button class="top_form_button">Apartment</button>
+                    </div>
+                    <div class="top_form_content">
+                        <label>To</label>
+                        <button class="top_form_button active">Airport</button>
+                        <button class="top_form_button">Hotel</button>
+                    </div>
+                    <button type="submit" class="top_form_submit">Continue</button>
+                    <p>Price: ¥2,400 ~</p>
+                    <a href="#">Check when you can pick up your luggage</a>
+                </form>
+            </div>
         </div>
-        <!-- Reserve Form-->
-        <form class="top_form" method="post" action="#" id="reserve_form">
-            <span class="top_form_title">Reserve now</span>
-            <div class="top_form_content  _space">
-                <label>From</label>
-                <button class="top_form_button active">Hotel</button>
-                <button class="top_form_button">Apartment</button>
-            </div>
-            <div class="top_form_content">
-                <label>To</label>
-                <button class="top_form_button active">Airport</button>
-                <button class="top_form_button">Hotel</button>
-            </div>
-            <button type="submit" class="top_form_submit">Continue</button>
-            <p>Price: ¥2,400 ~</p>
-            <a href="#">Check when you can pick up your luggage</a>
-        </form>
-        <!-- Reserve Form Background-->
-        <img class="full_background" src="./img/header_background.png" />
+        <!-- Reserve Form Background    <img class="full_background" src="./img/header_background.png" />-->
+       
     </header>
     <!-- Navigation Bar-->
     <ul class="nav" id="topbar">
