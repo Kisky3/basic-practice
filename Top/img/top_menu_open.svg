@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="19px" viewBox="0 0 25 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>ハンバーガー</title>
+    <desc>Created with Sketch.</desc>
+    <g id="🚗-General" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="top" transform="translate(-19.000000, -34.000000)" stroke="#FDFDFD" stroke-width="2">
+            <g id="ハンバーガー" transform="translate(20.000000, 35.000000)">
+                <path d="M0,0.5 L23,0.5" id="Line-3"></path>
+                <path d="M0,8.5 L23,8.5" id="Line-3"></path>
+                <path d="M0,16.5 L23,16.5" id="Line-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

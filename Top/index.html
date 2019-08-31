@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Japnaese City Check-in Top</title>
     <link rel="stylesheet" type="text/css" href="./css/top.css">
     <link rel="stylesheet" type="text/css" href="./css/swiper.css">
@@ -49,8 +50,32 @@
                 </form>
             </div>
         </div>
-        <!-- Reserve Form Background    <img class="full_background" src="./img/header_background.png" />-->
     </header>
+    <!--header mobile-->
+    <div class="header_mobile">
+        <div class="top_bar">
+            <img src="./img/top_menu_open.svg">
+            <img src="./img/logo_white.svg" />
+            <img src="./img/icon_earth.svg" />
+        </div>
+        <div class="title">Japanese City Check-in</div>
+        <!-- Reserve Form-->
+        <form class="top_form" method="post" action="#" id="reserve_form">
+            <span class="top_form_title">Reserve now</span>
+            <div class="top_form_content  _space">
+                <label>From</label>
+                <button class="top_form_button active">Hotel</button>
+                <button class="top_form_button">Apartment</button>
+            </div>
+            <div class="top_form_content">
+                <label>To</label>
+                <button class="top_form_button active">Airport</button>
+                <button class="top_form_button">Hotel</button>
+            </div>
+            <button type="submit" class="top_form_submit">Continue</button>
+            <p>Price: ¥2,400 ~</p>
+        </form>
+    </div>
     <!-- Navigation Bar-->
     <ul class="nav" id="topbar">
         <li><img src="./img/nav_logo.svg" /></li>
