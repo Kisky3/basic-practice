@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="81px" viewBox="0 0 44 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <g id="🚗-General" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Top---Contact" transform="translate(-919.000000, -241.000000)">
+            <g id="Group-8" transform="translate(908.000000, 233.000000)">
+                <text id="Call" opacity="0.749255952" font-family="Helvetica" font-size="15" font-weight="normal" fill="#000000">
+                    <tspan x="21.2463379" y="88">Call</tspan>
+                </text>
+                <g id="lv4:-SNS-/-call">
+                    <g id="Call">
+                        <g id="Group">
+                            <rect id="Rectangle" stroke="#979797" stroke-width="1.2" fill="#D8D8D8" opacity="0" x="0.6" y="0.6" width="62.8" height="62.8"></rect>
+                            <g id="icons8-phone" transform="translate(10.666667, 8.000000)" fill="#56BDAE">
+                                <path d="M38.7812505,33.2812505 C35.9762505,30.8365385 33.1216667,29.3509625 30.3520829,31.7956726 L28.6945838,33.2668265 C27.4833333,34.3413471 25.2308342,39.3461538 16.5254162,29.1418265 C7.82,18.9591342 12.9979171,17.3725957 14.2162505,16.3125009 L15.8808342,14.8341342 C18.6362505,12.389424 17.595,9.31009662 15.6045838,6.13701969 L14.4075009,4.21874954 C12.41,1.06009662 10.2283333,-1.01682646 7.46583424,1.42067262 L5.97125045,2.75480862 C4.74583424,3.65625046 1.33166667,6.60576923 0.50291712,12.2019231 C-0.495832427,18.9158658 2.65625045,26.6105778 9.86,35.0480769 C17.0566667,43.4927889 24.1116667,47.7331735 30.7841676,47.6610572 C36.3304162,47.5961538 39.6879171,44.5673077 40.7362505,43.4639428 L42.2308342,42.1298086 C44.9933333,39.6923077 43.2791676,37.2043274 40.4670829,34.7596154 L38.7812505,33.2812505 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

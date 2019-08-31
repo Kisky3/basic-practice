@@ -73,19 +73,17 @@
     <div class="sns_tab" id="sns_tab">
         <img id="line" src="./img/icon_line.svg">
         <img id="whatsapp" src="./img/icon_whatsapp.svg">
-        <img id="icon_wechat" src="./img/icon_wechat.svg">
-        <img id="icon_messanger" src="./img/icon_messanger.svg">
-        <img id="icon_call" src="./img/icon_call.svg">
+        <img id="wechat" src="./img/icon_wechat.svg">
+        <img id="messanger" src="./img/icon_messanger.svg">
+        <img id="call" src="./img/icon_call.svg">
     </div>
-
-    <!--Contact Modal-->
-    <div class="contact_modal">
+    <!--Sider Bar Contact Modal-->
+    <div class="contact_modal" id="contact_modal">
         <div class="contact_content">
-            <img src="./img/contact_line.svg">
+            <img id="modal_image" src="#">
             <div id="modal_close_btn" class="modal_close_btn"></div>
         </div>
     </div>
-
     <main>
         <!--How to use-->
         <section>
@@ -148,7 +146,22 @@
         <div class="content">
             <div class="title">Just ask anything not sure!!</div>
             <div class="subtitle">You can always ask us any question 9:00-23:00</div>
-            <button class="contact_button">Check how you can contact us</button>
+            <button id="contact_form_btn" class="contact_button" id="contact_button">Check how you can contact us</button>
+        </div>
+    </div>
+    <!-- Contact form-->
+    <div class="contact_form_modal" id="contact_form_modal">
+        <div class="contact_form">
+            <div class="contact_img">
+                <img id="contact_form_line" src="./img/contact_form_line.svg">
+                <img id="contact_form_whatsapp" src="./img/contact_form_whatsapp.svg">
+                <img id="contact_form_wechat" src="./img/contact_form_wechat.svg">
+                <img id="contact_form_messanger" src="./img/contact_form_messanger.svg">
+                <img id="contact_form_call" src="./img/contact_form_call.svg">
+            </div>
+            <div class="hr"></div>
+            <img class="form_img_content" id="form_modal_img" src="./img/contact_line.svg">
+            <div id="form_moda_close_btn" class="modal_close_btn"></div>
         </div>
     </div>
     <!--Safety points-->
@@ -514,9 +527,9 @@
     <footer>
         <img src="./img/footer_logo.svg">
         <div class="footer_container">
-            <span>Inscription based on specific trade law</span>
-            <span>Privacy Policy</span>
-            <span>Company</span>
+            <a>Inscription based on specific trade law</a>
+            <a>Privacy Policy</a>
+            <a>Company</a>
         </div>
     </footer>
     <script src="./js/common.js"></script>

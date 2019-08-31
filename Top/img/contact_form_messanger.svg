@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="71px" height="83px" viewBox="0 0 71 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <g id="🚗-General" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Top---Contact" transform="translate(-797.000000, -241.000000)">
+            <g id="Group-8" transform="translate(794.000000, 233.000000)">
+                <text id="Messanger" opacity="0.749255952" font-family="Helvetica" font-size="15" font-weight="normal" fill="#000000">
+                    <tspan x="1.89672852" y="88">Messanger</tspan>
+                </text>
+                <g id="lv4:-SNS-/-Messanger" transform="translate(4.000000, 0.000000)">
+                    <g id="Messanger">
+                        <rect id="Rectangle" stroke="#979797" stroke-width="1.2" fill="#D8D8D8" opacity="0" x="0.6" y="0.6" width="62.8" height="62.8"></rect>
+                        <path d="M32,8 C18.7664,8 8,18.2728934 8,30.8982843 C8,37.0326141 10.6112,42.9210887 15.2,47.2211455 L15.2,57.6965079 L24.992,52.781813 C27.2936,53.4542995 29.648,53.7965686 32,53.7965686 C45.2336,53.7965686 56,43.5236751 56,30.8982843 C56,18.2728934 45.2336,8 32,8 Z M34.8008,37.9292627 L27.8,32.3059262 L15.2,37.9292627 L29.1992,23.8697162 L36.2,29.4930527 L48.8,23.8673058 L34.8008,37.9292627 Z" id="Shape" fill="#0587FF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
