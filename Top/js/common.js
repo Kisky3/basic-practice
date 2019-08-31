@@ -59,8 +59,8 @@ function createFormModalImage(path) {
     $('#form_modal_img').attr('src', path);
 }
 
+/* side bar contact modal */
 window.onload = function() {
-    /* side bar contact modal */
     /* modal image path */
     let path;
 
@@ -86,7 +86,7 @@ window.onload = function() {
 
     /* contact modal */
     $('#contact_form_btn').click(function() {
-        $('#contact_form_modal').show();
+        $('#contact_form_modal').slideDown(1000);
     })
 
     $('#contact_form_line').click(function() {
@@ -110,10 +110,27 @@ window.onload = function() {
     })
 
     $('#modal_close_btn').click(function() {
-        $('#contact_modal').hide();
+        $('#contact_modal').slideUp(200);
     });
 
     $('#form_moda_close_btn').click(function() {
-        $('#contact_form_modal').hide();
+        $('#contact_form_modal').slideUp(200);
     });
 }
+
+/* Mobile Top Menu Open & Close*/
+$('#top_menu_open').click(function() {
+    if ($(this).attr('src') === "./img/top_menu_open.svg") {
+        $(this).attr('src', './img/top_menu_cross.svg');
+        $('#top_menu_modal').slideDown(200);
+    } else {
+        $(this).attr('src', './img/top_menu_open.svg');
+        $('#top_menu_modal').slideUp(200);
+
+    }
+})
+
+$('#top_menu_modal').click(function() {
+    $('#top_menu_modal').hide();
+    $('#top_menu_open').attr('src', './img/top_menu_open.svg');
+})

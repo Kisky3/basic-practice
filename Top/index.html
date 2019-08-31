@@ -54,9 +54,9 @@
     <!--header mobile-->
     <div class="header_mobile">
         <div class="top_bar">
-            <img src="./img/top_menu_open.svg">
+            <img id="top_menu_open" src="./img/top_menu_open.svg">
             <img src="./img/logo_white.svg" />
-            <img src="./img/icon_earth.svg" />
+            <img id="language_open" src="./img/icon_earth.svg" />
         </div>
         <div class="title">Japanese City Check-in</div>
         <!-- Reserve Form-->
@@ -76,15 +76,37 @@
             <p>Price: ¥2,400 ~</p>
         </form>
     </div>
+    <!--Top Menu Modal Mobile-->
+    <div class="top_menu_modal" id="top_menu_modal">
+        <a href="#">About</a>
+        <a href="#how_to_use">How to use</a>
+        <a href="#safety_points">Safety points</a>
+        <a href="#customer_voice">Customer’s voice</a>
+        <a href="#price">Deliverable Luggage</a>
+        <a href="#deliverable_luggage">Undeliverable Luggage</a>
+        <a href="#faq">FAQ</a>
+        <button>Reserve now</button>
+        <label>Contact</label>
+        <div class="top_menu_mark">
+            <img src="./img/top_menu_line.svg">
+            <img src="./img/top_menu_whatsapp.svg">
+            <img src="./img/top_menu_wechat.svg">
+            <img src="./img/top_menu_messanger.svg">
+            <img src="./img/top_menu_call.svg">
+        </div>
+    </div>
+    <!--Top Language Modal Mobile-->
     <!-- Navigation Bar-->
     <ul class="nav" id="topbar">
         <li><img src="./img/nav_logo.svg" /></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">How to use</a></li>
-        <li><a href="#">Safety points</a></li>
-        <li><a href="#">Customer's voice</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="#how_to_use">How to use</a></li>
+        <li><a href="#safety_points">Safety points</a></li>
+        <li><a href="#customer_voice">Customer's voice</a></li>
+        <li><a href="#price">Price</a></li>
+        <li><a href="#deliverable_luggage">Deliverable Luggage</a></li>
+        <li><a href="#undeliverable_luggage">Undeliverable Luggage</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li>
             <a href="#">
                 <div class="top_language">
@@ -114,7 +136,7 @@
             <div id="modal_close_btn" class="modal_close_btn"></div>
         </div>
     </div>
-    <main>
+    <main id="how_to_use">
         <!--How to use-->
         <section>
             <label>
@@ -194,7 +216,7 @@
         </div>
     </div>
     <!--Safety points-->
-    <section class="light_green">
+    <section class="light_green" id="safety_points">
         <label>
             <div class="border"></div>
             <p>Safety points</p>
@@ -293,7 +315,7 @@
         </div>
     </section>
     <!--Customer's Voice-->
-    <div class="customer_container">
+    <div class="customer_container" id="customer_voice">
         <div class="customer_content">
             <div class="title">Customer's Voice</div>
             <!-- Slider main container -->
@@ -350,7 +372,7 @@
     </div>
     <main class="mobile">
         <!--Price-->
-        <section>
+        <section id="price">
             <label>
                 <div class="border"></div>
                 <p>Price</p>
@@ -390,7 +412,7 @@
         </section>
     </main>
     <!--Deliverable Luggage  -->
-    <section class="light_green">
+    <section class="light_green" id="deliverable_luggage">
         <label>
             <div class="border"></div>
             <p>Deliverable Luggage</p>
@@ -445,7 +467,7 @@
             </div>
         </div>
     </section>
-    <main class="mobile">
+    <main class="mobile" id="undeliverable_luggage">
         <!-- Undeliverable Luggage -->
         <section>
             <label>
@@ -490,14 +512,14 @@
         </section>
     </main>
     <!-- FAQ -->
-    <section class="light_green full_size">
+    <section class="light_green full_size" id="faq">
         <div class="faq_title">FAQ</div>
         <div class="faq_container">
             <!-- ROW 1 -->
             <div class="drop">
                 <div class="drop_text">
                     <img src="./img/icon_faq.svg">
-                    <div>Can I pick up luggage? </div>
+                    <div>Can I pick up luggage Can I pick up luggage? </div>
                 </div>
                 <label for="_1">
                     <span id="dropcross1" class="drop_cross_close"></span>
@@ -514,7 +536,7 @@
             <div class="drop">
                 <div class="drop_text">
                     <img src="./img/icon_faq.svg">
-                    <div>Can I pick up luggage on ? </div>
+                    <div>Can I pick up luggage on 8 Can I pick up luggage? </div>
                 </div>
                 <label for="_2">
                     <span id="dropcross2" class="drop_cross_close"></span>
@@ -550,7 +572,7 @@
             <div class="drop">
                 <div class="drop_text">
                     <img src="./img/icon_faq.svg">
-                    <div>Can I pick up luggage on ? </div>
+                    <div>Can I pick up luggage on Can I pick up luggage Can I pick up luggage ? </div>
                 </div>
                 <label for="_4">
                     <span id="dropcross4" class="drop_cross_close"></span>

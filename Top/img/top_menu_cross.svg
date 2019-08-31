@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>lv1: ic / cross</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0.259948598,17.0553863 C-0.0850763291,17.4004112 -0.0858947898,17.9609996 0.257897255,18.3047916 L0.695208384,18.7421027 C1.0400011,19.0868955 1.59894904,19.085716 1.94461369,18.7400514 L9.5,11.1846651 L17.0553863,18.7400514 C17.4004112,19.0850763 17.9609996,19.0858948 18.3047916,18.7421027 L18.7421027,18.3047916 C19.0868955,17.9599989 19.085716,17.401051 18.7400514,17.0553863 L11.1846651,9.5 L18.7400514,1.94461369 C19.0850763,1.59958876 19.0858948,1.03900043 18.7421027,0.695208384 L18.3047916,0.257897255 C17.9599989,-0.0868954584 17.401051,-0.0857160465 17.0553863,0.259948598 L9.5,7.81533491 L1.94461369,0.259948598 C1.59958876,-0.0850763291 1.03900043,-0.0858947898 0.695208384,0.257897255 L0.257897255,0.695208384 C-0.0868954584,1.0400011 -0.0857160465,1.59894904 0.259948598,1.94461369 L7.81533491,9.5 L0.259948598,17.0553863 Z" id="path-1"></path>
+    </defs>
+    <g id="🚗-General" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="top---menu" transform="translate(-20.000000, -36.000000)">
+            <g id="Group">
+                <g id="lv1:-ic-/-cross" transform="translate(11.000000, 27.000000)">
+                    <g id="Group" transform="translate(9.500000, 9.500000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#FEFEFE" fill-rule="nonzero" opacity="0" xlink:href="#path-1"></use>
+                        <g id="lv1:-color-/-b&amp;w-/-light-100" mask="url(#mask-2)" fill="#FFFFFF">
+                            <g transform="translate(-9.500000, -9.500000)" id="white">
+                                <rect x="0" y="0" width="38" height="38"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

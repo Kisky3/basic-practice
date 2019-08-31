@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="49px" viewBox="0 0 48 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <g id="🚗-General" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="top---menu" transform="translate(-236.000000, -549.000000)">
+            <g id="Group-5" transform="translate(232.000000, 545.000000)">
+                <g id="lv4:-SNS-/-Messanger" transform="translate(10.000000, 0.000000)">
+                    <g id="Messanger">
+                        <rect id="Rectangle" stroke="#979797" stroke-width="1.2" fill="#D8D8D8" opacity="0" x="0.6" y="0.6" width="33.8" height="33.8"></rect>
+                        <path d="M17.5,4.375 C10.262875,4.375 4.375,9.9929886 4.375,16.8974992 C4.375,20.2522109 5.803,23.4724704 8.3125,25.8240639 L8.3125,31.5527778 L13.6675,28.865054 C14.9261875,29.23282 16.21375,29.4199984 17.5,29.4199984 C24.737125,29.4199984 30.625,23.8020098 30.625,16.8974992 C30.625,9.9929886 24.737125,4.375 17.5,4.375 Z M19.0316875,20.7425656 L15.203125,17.6673034 L8.3125,20.7425656 L15.9683125,13.053751 L19.796875,16.1290132 L26.6875,13.0524329 L19.0316875,20.7425656 Z" id="Shape" fill-opacity="0.302748033" fill="#000000" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+                <text id="Messanger" font-family="Helvetica" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.497650787">
+                    <tspan x="2.76611328" y="51">Messanger</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
