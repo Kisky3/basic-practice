@@ -714,10 +714,20 @@
 
    .footer_container a {
        color: #fff;
+       display: block;
+       width: 100%;
+   }
+
+   .footer_link {
+       width: 100%;
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
    }
 
    .footer_container a:hover {
        text-decoration: underline;
+       color: #fff;
    }
 
    /* contact_modal */
@@ -1112,8 +1122,8 @@
            width: 90%;
        }
 
-       .light_green {
-           width: 100%;
+       .full_size {
+        width: 100%;
        }
 
        .drop_text img {
@@ -1139,6 +1149,27 @@
            top: 8px;
            left: -8px;
        }
+
+       footer {
+           height: 120px;
+       }
+
+       footer img {
+           height: 23px;
+       }
+
+       .footer_container {
+           width: 80%;
+           flex-direction: column;
+           font-size: 11px;
+           text-align: center;
+       }
+
+       .footer_link {
+           width: 60%;
+           margin-top: 10px;
+       }
+
 
 
    }
