@@ -904,7 +904,7 @@
        }
 
        .top_form {
-           width: 343px;
+           width: 90%;
            height: 286px;
            background: rgba(255, 255, 255, 0.98);
            border-radius: 9px;
@@ -975,7 +975,7 @@
        }
 
        .top_form_submit {
-           width: 301px;
+           width: 90%;
            height: 48px;
            display: flex;
            align-items: center;
@@ -1020,7 +1020,7 @@
            font-size: 32px;
            color: #68C0B8;
            top: 0;
-           right: 250px;
+           right: 80%;
            font-weight: bold;
            right: '' !important;
        }
@@ -1033,6 +1033,7 @@
            margin: 45px 0 20px;
            font-weight: normal;
            font-weight: bold;
+           width: 90%;
        }
 
        section .column p {
@@ -1076,6 +1077,22 @@
            text-align: center;
            line-height: 33px;
        }
+
+       .customer_container {
+           background-image: url('../img/customer_voice_mobile.svg');
+           background-size: cover;
+       }
+
+       .customer_content .title {
+           font-size: 22px;
+           line-height: 46.08px;
+       }
+
+       .customer_content {
+           width: 100%;
+       }
+
+
 
 
    }
