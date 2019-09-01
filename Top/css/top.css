@@ -60,7 +60,7 @@
        align-items: center;
        justify-content: space-between;
        padding: 20px 52px 0;
-       z-index: 2;
+       z-index: 10;
    }
 
    header .columns {
@@ -180,9 +180,7 @@
        justify-content: center;
        align-items: self-start;
        flex-direction: column;
-       width: 500px;
-       position: absolute;
-       top: 150px;
+       margin-top: 150px;
    }
 
    header .header_content .title,
@@ -191,6 +189,7 @@
        font-size: 44px;
        letter-spacing: 0;
        line-height: 77px;
+       margin: 20px;
    }
 
    .contact_container .title {
@@ -204,9 +203,11 @@
        letter-spacing: 0;
        line-height: 33px;
        text-align: left;
+       margin: 20px;
    }
 
    .top_language {
+       cursor: pointer !important;
        display: flex;
        align-items: center;
        justify-content: center;
@@ -280,8 +281,61 @@
        cursor: pointer;
    }
 
+   .top_menu_mobile_modal {
+       display: none;
+   }
+
    .top_menu_modal {
-       display: none
+       display: none;
+       width: 100%;
+       position: fixed;
+       top: 60px;
+       z-index: 10;
+       height: 100%;
+       background-color: #F5FAFA;
+   }
+
+   .top_menu_modal a {
+       cursor: pointer;
+       display: block;
+       border-top: dashed 1px #D8D8D8;
+       background-color: #fff;
+       height: 7%;
+       width: 100%;
+       padding: 17px 0 20px 30px;
+       font-size: 16px;
+       color: #131415;
+       letter-spacing: 0.11px;
+       justify-content: start;
+       display: flex;
+       align-items: center;
+   }
+
+   .top_menu_modal button {
+       position: absolute;
+       width: 196px;
+       height: 44px;
+       background: #56BDAE;
+       border-radius: 22px;
+       font-size: 15px;
+       color: #FFFFFF;
+       letter-spacing: 1.15px;
+       text-align: center;
+       border: none;
+       font-weight: bold;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       margin-top: 50px;
+   }
+
+   .top_menu_modal label {
+       font-size: 16px;
+       color: rgba(0, 0, 0, 0.80);
+       letter-spacing: 0;
+       text-align: center;
+       position: absolute;
+       margin-left: 30px;
+       margin-top: 28%;
    }
 
    /* Navigation Bar */
@@ -406,7 +460,7 @@
    section .underline {
        border-bottom: solid 2px #28536B;
        padding: 15px 0;
-       width: 65%;
+       width: 70%;
    }
 
    section .safe_check {
@@ -499,6 +553,7 @@
        border-radius: 8px;
        font-size: 14px;
        border: none;
+       margin: 20px;
    }
 
    .customer_content {
@@ -840,12 +895,7 @@
 
        header .top_form {
            position: absolute;
-           top: 250px;
-       }
-
-       header .header_content .title {
-           position: absolute;
-           top: 100px;
+           top: 300px;
        }
 
        header .header_content .subtitle {
@@ -897,58 +947,6 @@
 
        .header_mobile img {
            cursor: pointer;
-       }
-
-       .top_menu_modal {
-           width: 100%;
-           position: fixed;
-           top: 60px;
-           z-index: 10;
-           height: 100%;
-           background-color: #F5FAFA;
-       }
-
-       .top_menu_modal a {
-           cursor: pointer;
-           display: block;
-           border-top: dashed 1px #D8D8D8;
-           background-color: #fff;
-           height: 7%;
-           width: 100%;
-           padding: 17px 0 20px 30px;
-           font-size: 16px;
-           color: #131415;
-           letter-spacing: 0.11px;
-           justify-content: start;
-           display: flex;
-           align-items: center;
-       }
-
-       .top_menu_modal button {
-           position: absolute;
-           width: 196px;
-           height: 44px;
-           background: #56BDAE;
-           border-radius: 22px;
-           font-size: 15px;
-           color: #FFFFFF;
-           letter-spacing: 1.15px;
-           text-align: center;
-           border: none;
-           font-weight: bold;
-           left: 50%;
-           transform: translate(-50%, -50%);
-           margin-top: 50px;
-       }
-
-       .top_menu_modal label {
-           font-size: 16px;
-           color: rgba(0, 0, 0, 0.80);
-           letter-spacing: 0;
-           text-align: center;
-           position: absolute;
-           margin-left: 30px;
-           margin-top: 28%;
        }
 
        .top_menu_mark {

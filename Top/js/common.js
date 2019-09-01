@@ -164,14 +164,32 @@ $('#top_menu_open').click(function() {
     }
 })
 
-/*Mobile Top Language Open & Close */
-$('#language_open').click(function() {
-    if ($(this).attr('src') === "./img/icon_earth.svg") {
-        $(this).attr('src', './img/top_menu_cross.svg');
+function showLanguageModal() {
+    if ($('#top_language_modal').is(':visible')) {
+        $('#top_language_modal').slideUp(200);
+    } else {
         $('#top_language_modal').slideDown(200);
+    }
+}
+
+/* Top Language Open & Close */
+$('#top_bar_language').click(function() {
+    showLanguageModal();
+})
+
+$('#top_bar_language2').click(function() {
+    showLanguageModal();
+
+})
+
+/* Mobile Top Language Open & Close */
+$('#language_open').click(function() {
+    if ($('#top_language_modal').is(':visible')) {
+        $(this).attr('src', './img/top_menu_cross.svg');
+        $('#top_language_modal').slideUp(200);
     } else {
         $(this).attr('src', './img/icon_earth.svg');
-        $('#top_language_modal').slideUp(200);
+        $('#top_language_modal').slideDown(200);
     }
 })
 
