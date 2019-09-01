@@ -59,6 +59,11 @@ function createFormModalImage(path) {
     $('#form_modal_img').attr('src', path);
 }
 
+/* Mobile */
+function createFormMobileImage(path) {
+    $('#contact_form_mobile_img').attr('src', path);
+}
+
 /* side bar contact modal */
 window.onload = function() {
     /* modal image path */
@@ -86,9 +91,14 @@ window.onload = function() {
 
     /* contact modal */
     $('#contact_form_btn').click(function() {
-        $('#contact_form_modal').slideDown(1000);
+        if (window.innerWidth < 480) {
+            $('#contact_form_mobile_modal').show();
+        } else {
+            $('#contact_form_modal').show();
+        }
     })
 
+    /* Web Contact Form */
     $('#contact_form_line').click(function() {
         path = './img/contact_line.svg';
         createFormModalImage(path)
@@ -109,12 +119,37 @@ window.onload = function() {
         createFormModalImage(path)
     })
 
+    /* Mobile Contact Form */
+    $('#contact_form_mobile_line').click(function() {
+        path = './img/contact_line.svg';
+        createFormMobileImage(path)
+    })
+
+    $('#contact_form_mobile_whatsapp').click(function() {
+        path = './img/contact_whatsapp.svg';
+        createFormMobileImage(path)
+    })
+
+    $('#contact_form_mobile_wechat').click(function() {
+        path = './img/contact_wechat.svg';
+        createFormMobileImage(path)
+    })
+
+    $('#contact_form_mobile_call').click(function() {
+        path = './img/contact_call.svg';
+        createFormMobileImage(path)
+    })
+
     $('#modal_close_btn').click(function() {
-        $('#contact_modal').slideUp(200);
+        $('#contact_modal').hide();
     });
 
-    $('#form_moda_close_btn').click(function() {
-        $('#contact_form_modal').slideUp(200);
+    $('#form_modal_close_btn').click(function() {
+        $('#contact_form_modal').hide();
+    });
+
+    $('#form_modal_mobile_close_btn').click(function() {
+        $('#contact_form_mobile_modal').hide();
     });
 }
 
@@ -126,7 +161,6 @@ $('#top_menu_open').click(function() {
     } else {
         $(this).attr('src', './img/top_menu_open.svg');
         $('#top_menu_modal').slideUp(200);
-
     }
 })
 
@@ -138,7 +172,6 @@ $('#language_open').click(function() {
     } else {
         $(this).attr('src', './img/icon_earth.svg');
         $('#top_language_modal').slideUp(200);
-
     }
 })
 
