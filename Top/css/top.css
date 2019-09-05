@@ -668,63 +668,17 @@
    .faq_container {
        width: 65%;
        margin: auto;
-   }
-
-   .drop {
        display: flex;
        align-items: center;
        justify-content: space-between;
    }
 
-   .drop_text {
-       display: flex;
-       justify-content: start;
-       align-items: center;
-       margin-bottom: 30px;
-   }
-
-   .drop_text img {
-       margin-right: 25px;
-   }
-
-   .drop_text div {
-       font-size: 16px;
-       color: #424242;
-       letter-spacing: 0;
-       margin-right: 12px;
-   }
-
-   .drop+input {
+   .faq_box {
        display: none;
-       width: 30px;
-       height: 30px;
-       /* hide the checkboxes */
+       padding: 30px;
    }
 
-   .drop+input+div {
-       display: none;
-   }
-
-   .drop+input:checked+div {
-       display: block;
-       padding: 0 0 50px 50px;
-       font-size: 15px;
-       color: #56BDAE;
-       letter-spacing: 0;
-       animation: fade-in 2s ease;
-   }
-
-   @keyframes fade-in {
-       0% {
-           opacity: 0
-       }
-
-       100% {
-           opacity: 1
-       }
-   }
-
-   .drop_cross_close {
+   .btn_open {
        position: relative;
        cursor: pointer;
        width: 4px;
@@ -732,7 +686,7 @@
        background-color: #4EB5AC;
    }
 
-   .drop_cross_close:before {
+   .btn_open:before {
        content: '';
        position: absolute;
        cursor: pointer;
@@ -743,7 +697,7 @@
        left: -10px;
    }
 
-   .drop_cross_open {
+   .btn_close {
        position: relative;
        cursor: pointer;
        width: 25px;
@@ -751,6 +705,28 @@
        background-color: #4EB5AC;
        right: -11px;
    }
+
+   .slide_btn:hover {
+       cursor: pointer;
+   }
+
+   .slide_box {
+       width: 60%;
+       margin: auto;
+       word-break: break-all;
+       font-size: 15px;
+       color: #56BDAE;
+   }
+
+   .faq_question {
+       display: flex;
+       align-items: center;
+   }
+
+   .faq_question img {
+       margin-right: 20px;
+   }
+
 
    footer {
        width: 100%;

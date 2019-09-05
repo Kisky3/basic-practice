@@ -44,10 +44,38 @@ var mySwiper = new Swiper('.swiper-container', {
     spaceBetween: 10
 })
 
-/* FAQ drop mark open&close */
-$('span[id^="dropcross"]').click(function() {
-    ($(this).attr('class') === "drop_cross_open") ?
-    $(this).attr('class', 'drop_cross_close'): $(this).attr('class', 'drop_cross_open');
+/* FAQ drop mark open&close 
+$(function() {
+
+    $(".slide_btn").on("click", function() {
+        if ($(this).hasClass('btn_open')) {
+            $(this).removeClass('btn_open');
+            $(this).toggleClass("btn_close");
+
+        } else {
+            $(this).removeClass('btn_close');
+            $(this).toggleClass("btn_open");
+        }
+
+        $(".slide_box").slideToggle("fast");
+    });
+});*/
+
+$('div[id^="slide"]').click(function() {
+    var str = $(this).attr('id');
+    /*get Slide id */
+    var slide_id = str.charAt(str.length - 1);
+
+    $("#" + slide_id).slideToggle("fast");
+
+    if ($(this).hasClass('btn_open')) {
+        $(this).removeClass('btn_open');
+        $(this).toggleClass("btn_close");
+
+    } else {
+        $(this).removeClass('btn_close');
+        $(this).toggleClass("btn_open");
+    }
 });
 
 function createModalImage(path) {
