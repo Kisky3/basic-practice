@@ -10,8 +10,8 @@ window.onscroll = function() {
     /* SNS Tab */
     var sns_tab = document.getElementById('sns_tab');
 
-    /* If top > 380 show navigation bar*/
-    if (top > 380) {
+    /* If top > 480 show navigation bar*/
+    if (top > 480) {
         topbar.style.display = 'block';
     } else {
         topbar.style.display = 'none';
