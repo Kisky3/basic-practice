@@ -14,7 +14,7 @@ window.onscroll = function() {
 
     /* If top > 480 show navigation bar*/
     if (top > 480) {
-        if (width > 1440) {
+        if (width > 1400) {
             topbar.style.display = 'block';
             topbar_small.style.display = 'none';
         } else {
@@ -41,6 +41,14 @@ window.onscroll = function() {
     }
 }
 
+$('#topbar').find('a').click(function() {
+    tagAnimation(this);
+});
+
+$('#top_menu_modal').find('a').click(function() {
+    tagAnimation(this);
+});
+
 /* Customer's Voice swiper control */
 var mySwiper = new Swiper('.swiper-container', {
     type: 'bullets',
@@ -52,23 +60,6 @@ var mySwiper = new Swiper('.swiper-container', {
     autoplay: false,
     spaceBetween: 10
 })
-
-/* FAQ drop mark open&close 
-$(function() {
-
-    $(".slide_btn").on("click", function() {
-        if ($(this).hasClass('btn_open')) {
-            $(this).removeClass('btn_open');
-            $(this).toggleClass("btn_close");
-
-        } else {
-            $(this).removeClass('btn_close');
-            $(this).toggleClass("btn_open");
-        }
-
-        $(".slide_box").slideToggle("fast");
-    });
-});*/
 
 $('div[id^="slide"]').click(function() {
     var str = $(this).attr('id');
@@ -86,20 +77,6 @@ $('div[id^="slide"]').click(function() {
         $(this).toggleClass("btn_open");
     }
 });
-
-function createModalImage(path) {
-    $('#modal_image').attr('src', path);
-    $('#contact_modal').show();
-}
-
-function createFormModalImage(path) {
-    $('#form_modal_img').attr('src', path);
-}
-
-/* Mobile */
-function createFormMobileImage(path) {
-    $('#contact_form_mobile_img').attr('src', path);
-}
 
 /* side bar contact modal */
 window.onload = function() {
@@ -201,28 +178,16 @@ $('#top_small_nav_open').click(function() {
     }
 })
 
+$('#top_nav_modal a').click(function() {
+    tagAnimation(this);
+    $('#top_nav_modal').hide();
+    $('#top_small_nav_open').attr('src', './img/top_menu_open.svg')
+})
+
 /* Mobile Top Menu Open & Close*/
 $('#top_menu_open').click(function() {
     changeMenuOpenMark(this);
 })
-
-function changeMenuOpenMark(id) {
-    if ($(id).attr('src') === "./img/top_menu_open.svg") {
-        $(id).attr('src', './img/top_menu_cross.svg');
-        $('#top_menu_modal').slideDown(200);
-    } else {
-        $(id).attr('src', './img/top_menu_open.svg');
-        $('#top_menu_modal').slideUp(200);
-    }
-}
-
-function showLanguageModal() {
-    if ($('#top_language_modal').is(':visible')) {
-        $('#top_language_modal').slideUp(200);
-    } else {
-        $('#top_language_modal').slideDown(200);
-    }
-}
 
 /* Top Language Open & Close */
 $('#top_bar_language').click(function() {
@@ -261,3 +226,74 @@ $('#top_menu_modal').click(function() {
     $('#top_menu_modal').hide();
     $('#top_menu_open').attr('src', './img/top_menu_open.svg');
 })
+
+/* Close Modal after clicking background */
+$('#contact_content').click(function() {
+    stopPropagation();
+})
+
+$('#contact_form').click(function() {
+    stopPropagation();
+})
+
+$('#contact_form_mobie').click(function() {
+    stopPropagation();
+})
+
+
+$('#contact_modal').click(function() {
+    hideModal(this);
+})
+
+$('#contact_form_modal').click(function() {
+    hideModal(this);
+})
+
+$('#contact_form_mobile_modal').click(function() {
+    hideModal(this);
+})
+
+function stopPropagation(content_id) {
+    event.stopPropagation();
+}
+
+function hideModal(modal_id) {
+    $(modal_id).hide();
+}
+
+function changeMenuOpenMark(id) {
+    if ($(id).attr('src') === "./img/top_menu_open.svg") {
+        $(id).attr('src', './img/top_menu_cross.svg');
+        $('#top_menu_modal').slideDown(200);
+    } else {
+        $(id).attr('src', './img/top_menu_open.svg');
+        $('#top_menu_modal').slideUp(200);
+    }
+}
+
+function showLanguageModal() {
+    if ($('#top_language_modal').is(':visible')) {
+        $('#top_language_modal').slideUp(200);
+    } else {
+        $('#top_language_modal').slideDown(200);
+    }
+}
+
+function tagAnimation(id) {
+    $("html, body").animate({ scrollTop: $($(id).attr("href")).offset().top - 20 + "px" }, 500);
+    return false;
+}
+
+function createModalImage(path) {
+    $('#modal_image').attr('src', path);
+    $('#contact_modal').show();
+}
+
+function createFormModalImage(path) {
+    $('#form_modal_img').attr('src', path);
+}
+
+/* Mobile */
+function createFormMobileImage(path) {
+    $('#contact_form_mobile_img').attr('src', path);
+}
