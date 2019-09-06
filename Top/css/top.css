@@ -296,6 +296,15 @@
        float: right;
    }
 
+   .top_menu_modal._left {
+       width: 30%;
+       position: sticky;
+       top: 60px;
+       z-index: 10;
+       box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+       float: left;
+   }
+
    .top_menu_modal a {
        cursor: pointer;
        display: block;
@@ -340,6 +349,10 @@
 
 
    /* Navigation Bar */
+   .nav_small {
+       display: none;
+   }
+
    .nav {
        display: none;
        list-style-type: none;
@@ -863,6 +876,43 @@
        color: rgba(66, 66, 66, 0.7);
    }
 
+   @media screen and (max-width: 1400px) {
+       .nav {
+           display: none !important;
+       }
+
+       .nav_small {
+           margin: 0;
+           padding: 0;
+           overflow: hidden;
+           background: rgba(0, 0, 0, 0.4);
+           color: rgba(0, 0, 0, 0.5);
+           font-size: 16px;
+           padding: 8px 46px 0 46px;
+           top: 0;
+           width: 100%;
+           z-index: 10;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           position: sticky;
+           height: 60px;
+       }
+
+       .nav_small img:first-child {
+           width: 17px;
+           height: 23px;
+       }
+
+       .nav_small img:nth-child(2) {
+           height: 26px;
+       }
+
+       .nav_small img:nth-child(3) {
+           height: 20px;
+       }
+   }
+
    @media screen and (max-width: 768px) {
 
        header .header_content {
@@ -950,6 +1000,10 @@
            display: none !important;
        }
 
+       .nav_small {
+           display: none !important;
+       }
+
        .sns_tab {
            display: none !important;
        }
@@ -989,7 +1043,7 @@
            padding: 30px;
        }
 
-       .header_mobile .top_bar {
+       .header_mobile .top_bar_small {
            position: fixed;
            width: 100%;
            display: flex;
@@ -1003,16 +1057,16 @@
            z-index: 12;
        }
 
-       .header_mobile .top_bar img:first-child {
-           width: 17px;
-           height: 23px;
+       .header_mobile .top_bar_small img:first-child {
+           width: 20px;
+           height: 20px;
        }
 
-       .header_mobile .top_bar img:nth-child(2) {
+       .header_mobile .top_bar_small img:nth-child(2) {
            height: 26px;
        }
 
-       .header_mobile .top_bar img:nth-child(3) {
+       .header_mobile .top_bar_small img:nth-child(3) {
            height: 20px;
        }
 
@@ -1113,8 +1167,6 @@
        .contact_form_modal {
            display: none !important;
        }
-
-       .contact_form_modal_mobile {}
 
        section label {
            padding: 0px;

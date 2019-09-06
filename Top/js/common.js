@@ -1,8 +1,10 @@
 /* navigation bar animation control */
 window.onscroll = function() {
     var top = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    var width = document.body.offsetWidth;
     /* Topbar */
     var topbar = document.getElementById('topbar');
+    var topbar_small = document.getElementById('topbar_small');
 
     /* Reserve Button */
     var reserve_btn = document.getElementById('reserve_btn');
@@ -12,9 +14,16 @@ window.onscroll = function() {
 
     /* If top > 480 show navigation bar*/
     if (top > 480) {
-        topbar.style.display = 'block';
+        if (width > 1440) {
+            topbar.style.display = 'block';
+            topbar_small.style.display = 'none';
+        } else {
+            topbar.style.display = 'none';
+            topbar_small.style.display = 'flex';
+        }
     } else {
         topbar.style.display = 'none';
+        topbar_small.style.display = 'none';
     }
 
     /* If top > 500 show reserve button */
@@ -181,16 +190,31 @@ window.onload = function() {
     });
 }
 
-/* Mobile Top Menu Open & Close*/
-$('#top_menu_open').click(function() {
+/* Small Screen Top Menu Open & Close */
+$('#top_small_nav_open').click(function() {
     if ($(this).attr('src') === "./img/top_menu_open.svg") {
         $(this).attr('src', './img/top_menu_cross.svg');
-        $('#top_menu_modal').slideDown(200);
+        $('#top_nav_modal').slideDown(200);
     } else {
         $(this).attr('src', './img/top_menu_open.svg');
-        $('#top_menu_modal').slideUp(200);
+        $('#top_nav_modal').slideUp(200);
     }
 })
+
+/* Mobile Top Menu Open & Close*/
+$('#top_menu_open').click(function() {
+    changeMenuOpenMark(this);
+})
+
+function changeMenuOpenMark(id) {
+    if ($(id).attr('src') === "./img/top_menu_open.svg") {
+        $(id).attr('src', './img/top_menu_cross.svg');
+        $('#top_menu_modal').slideDown(200);
+    } else {
+        $(id).attr('src', './img/top_menu_open.svg');
+        $('#top_menu_modal').slideUp(200);
+    }
+}
 
 function showLanguageModal() {
     if ($('#top_language_modal').is(':visible')) {
@@ -207,8 +231,13 @@ $('#top_bar_language').click(function() {
 
 $('#top_bar_language2').click(function() {
     showLanguageModal();
-
 })
+
+/* Top Small Language Open & Close */
+$('#top_small_language_open').click(function() {
+    showLanguageModal();
+})
+
 
 /* Mobile Top Language Open & Close */
 $('#language_open').click(function() {
