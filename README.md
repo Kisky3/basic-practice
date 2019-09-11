@@ -25,7 +25,7 @@ I made small modal sample about login&register with js html and css.
 ```
 
 ### preview
-[Preview](https://kisky3.github.io/Jirengu/Jirengu_task27/index.html)
+[Preview](https://kisky3.github.io/Jirengu/Jirengu_task27/index)
 <img src="./preview_image/task_27.png" style="width:400px">
 
 ***
@@ -87,7 +87,7 @@ music-player
 ```
 
 ### preview
-[Preview](https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/index.html)
+[Preview](https://kisky3.github.io/Jirengu/Jirengu_task31/music-player/index)
 <br>
 <img src="./preview_image/task_31.png" style="width:400px">
 
@@ -111,7 +111,7 @@ This is a index page of tabs which were made by Js or jQuery
 ```
 
 ### preview
-[Preview](https://kisky3.github.io/Jirengu/Jirengu_task34/index.html)
+[Preview](https://kisky3.github.io/Jirengu/Jirengu_task34/index)
 <br> 
 <img src="./preview_image/task_34.png" style="width:400px">
 
@@ -127,7 +127,7 @@ This is a sample of how to swich cute icon with jQuery.And I also used colorful 
 ```
 
 ### preview
-[Preview](https://kisky3.github.io/Jirengu/Jirengu_task35/index.html)
+[Preview](https://kisky3.github.io/Jirengu/Jirengu_task35/index)
 <br> 
 <img src="./preview_image/task_35.png" style="width:400px">
 
@@ -141,6 +141,6 @@ This is a sample of create 3 pictures at the same time and you can also edit or 
 ```
 
 ### preview
-[Preview](https://kisky3.github.io/Jirengu/Jirengu_task36/index.html)
+[Preview](https://kisky3.github.io/Jirengu/Jirengu_task36/index)
 <img src="./preview_image/task_36.png" style="width:400px">
 
