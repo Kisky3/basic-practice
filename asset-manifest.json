@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Kisky3/Jirengu/todoList/hello-world/static/css/main.b100e6da.chunk.css",
+    "main.js": "/Kisky3/Jirengu/todoList/hello-world/static/js/main.ac0fe5cb.chunk.js",
+    "main.js.map": "/Kisky3/Jirengu/todoList/hello-world/static/js/main.ac0fe5cb.chunk.js.map",
+    "runtime-main.js": "/Kisky3/Jirengu/todoList/hello-world/static/js/runtime-main.51587b50.js",
+    "runtime-main.js.map": "/Kisky3/Jirengu/todoList/hello-world/static/js/runtime-main.51587b50.js.map",
+    "static/js/2.717ae7a0.chunk.js": "/Kisky3/Jirengu/todoList/hello-world/static/js/2.717ae7a0.chunk.js",
+    "static/js/2.717ae7a0.chunk.js.map": "/Kisky3/Jirengu/todoList/hello-world/static/js/2.717ae7a0.chunk.js.map",
+    "index.html": "/Kisky3/Jirengu/todoList/hello-world/index.html",
+    "precache-manifest.fb78290574be6225d4bd5e22ed955b20.js": "/Kisky3/Jirengu/todoList/hello-world/precache-manifest.fb78290574be6225d4bd5e22ed955b20.js",
+    "service-worker.js": "/Kisky3/Jirengu/todoList/hello-world/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/Kisky3/Jirengu/todoList/hello-world/static/css/main.b100e6da.chunk.css.map",
+    "static/media/logo.svg": "/Kisky3/Jirengu/todoList/hello-world/static/media/logo.25bf045c.svg"
+  }
+}
