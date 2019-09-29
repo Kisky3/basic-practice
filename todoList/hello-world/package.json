@@ -2,7 +2,7 @@
   "name": "hello-world",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Kisky3.github.io/Jirengu/todoList/hello-world",
+  "homepage": "https://github.com/Kisky3/Jirengu/todoList/hello-world",
   "dependencies": {
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
